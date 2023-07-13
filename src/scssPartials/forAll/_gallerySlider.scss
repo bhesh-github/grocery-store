@@ -1,0 +1,208 @@
+// Gallery Slider
+.gallery-section {
+	// margin-top: 9em;
+	overflow: hidden;
+	display: flex;
+	gap: 0.6em;
+	// width: 84.3%;
+	height: 300px;
+    width: 98%;
+	// border-radius: 15px;
+	.display-image {
+		border-radius: 20px;
+		width: 100%;
+		height: 100%;
+		background-color: rgb(234, 234, 234);
+		.img {
+			border-radius: 20px;
+			width: 100%;
+			height: 100%;
+		}
+	}
+}
+// Slider Overlay
+.slider-overlay {
+	position: absolute;
+	z-index: 1000;
+	top: 0;
+	left: 0;
+	height: 100%;
+	width: 100%;
+	background-color: rgba(0, 0, 0, 0.804);
+	position: fixed;
+
+	// Slider
+	.gallery-slider {
+		display: flex;
+		justify-content: center;
+		.slider-image {
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			transform: translate(-50%, -50%);
+			background-size: cover;
+			background-repeat: no-repeat;
+			width: 60%;
+			height: 40em;
+			background-position: center;
+			transition: 1s;
+		}
+
+		// Beaking Point 800px
+
+		.left-icon {
+			position: absolute;
+			background-color: #fff;
+			left: 2em;
+			top: 50%;
+			transform: translate(0, -50%);
+			// right: 1.5em;
+			cursor: pointer;
+			color: white;
+			border-radius: 50%;
+			padding: 10px;
+			right: 2em;
+			top: 50%;
+			width: 45px;
+			height: 45px;
+		}
+		.right-icon {
+			background-color: #fff;
+			cursor: pointer;
+			position: absolute;
+			border-radius: 50%;
+			padding: 10px;
+			right: 2em;
+			top: 50%;
+			width: 45px;
+			height: 45px;
+			color: #fff;
+			transform: translate(0, -50%);
+		}
+		.slider-close-icon {
+			position: absolute;
+			top: 1.5em;
+			right: 1.5em;
+			cursor: pointer;
+			color: white;
+			width: 25px;
+			height: 25px;
+		}
+		.slider-dots {
+			position: absolute;
+			z-index: 99;
+			bottom: 1em;
+			.dots-icon {
+				color: #fff;
+				width: 1.3em;
+				height: 1.3em;
+				margin: 0 1.5px;
+				cursor: pointer;
+			}
+			.dots-icon:hover {
+				color: grey;
+			}
+		}
+	}
+	@media screen and (max-width: 670px) {
+		.gallery-slider {
+			.slider-image {
+				width: 80%;
+			}
+			.left-icon {
+				padding: 5px;
+				left: 1em;
+				width: 35px;
+				height: 35px;
+			}
+			.right-icon {
+				padding: 5px;
+				right: 1em;
+				width: 35px;
+				height: 35px;
+			}
+		}
+	}
+}
+// .single-product-page-carousel {
+//     // background-color: red;
+//     // padding: 0;
+//     // background-image: cover;
+//     // background-repeat: no-repeat;
+//     // background-color: rgb(216, 216, 216);
+//     // // height: 75vh;
+//     // height: 80vh;
+//     // background-position: center;
+//     width: 100%;
+//     position: relative;
+//     // margin-top: 8em;
+//     // //
+//     // display: flex;
+//     // justify-content: center;
+//     z-index: 0;
+//     .display-img{
+//         max-height: 300px;
+//         min-height: 300px;
+//         margin-top: 7.9em;
+//         width: 100%;
+//         height: auto;
+//     }
+//     @media screen and (max-width: 1000px) {
+//         .display-img{
+//             max-height: 600px;
+//             min-height: 600px;
+//         }
+//     }
+//     @media screen and (max-width: 700px) {
+//         .display-img{
+//             max-height: 500px;
+//             min-height: 500px;
+//         }
+//     }
+//     @media screen and (max-width: 500px) {
+//         .display-img{
+//             max-height: 400px;
+//             min-height: 400px;
+//         }
+//     }
+//     .icon {
+//         background-color: rgba(255, 255, 255, 0.522);
+//         height: 30px;
+//         width: 30px;
+//         border-radius: 50%;
+//         color: #fff;
+//     }
+//     .icon:hover {
+//         background-color: #fff;
+//     }
+//     .slider-left-icon {
+//         left: 1em;
+//         transform: translate(0, 300%);
+//     }
+//     .slider-right-icon {
+//         right: 1em;
+//         transform: translate(0, 300%);
+//     }
+//     .slider-dots {
+//         position: absolute;
+//         bottom: 1em;
+//         left: 50%;
+//         transform: translate(-50%);
+//         .dots-icon {
+//             color: #fff;
+//             width: 1.3em;
+//             height: 1.3em;
+//             margin: 0 1.5px;
+//             cursor: pointer;
+//         }
+//         .dots-icon:hover {
+//             color: grey;
+//         }
+//     }
+// }
+
+// @media screen and (min-width: 1001px) {
+//     .single-product-page-carousel {
+//         display: none;
+//     }
+// }
