@@ -11,7 +11,7 @@ const Home = ({ images }) => {
     <>
       <QuickDetailViewPopup />
       <div
-        classNameName="index-page"
+        className="index-page"
         style={{
           display: "flex",
           flexDirection: "column",

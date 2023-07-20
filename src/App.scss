@@ -42,6 +42,7 @@ $mainColor: #E73918;
   }
 }
 
+@import './scssPartials/main/header';
 @import './scssPartials/pages/home/home';
 @import './scssPartials/forAll/multiCarousel';
 @import './scssPartials/forAll/gallerySlider';

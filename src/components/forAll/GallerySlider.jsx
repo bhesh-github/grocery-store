@@ -10,7 +10,6 @@ const GalleryWithSlider = ({ images }) => {
   // ---Gallery Slider---
   const [currentIndex, setCurrentIndex] = useState(0);
   // const currentData = images && images[currentIndex];
-
   const autoSlide = () => {
     if (preventAutoSlide) {
       const isLastSlide = currentIndex === images.length - 1;
@@ -18,8 +17,9 @@ const GalleryWithSlider = ({ images }) => {
       setCurrentIndex(newIndex);
     }
   };
+  let myTimeout;
   useEffect(() => {
-    setTimeout(autoSlide, 3000);
+    myTimeout = setTimeout(autoSlide, 3000);
   });
   return (
     <>
@@ -34,6 +34,13 @@ const GalleryWithSlider = ({ images }) => {
               }
               alt=""
               className="img"
+              onMouseOver={() => {
+                clearTimeout(myTimeout);
+              }}
+              onMouseOut={() => {
+                setCurrentIndex(currentIndex);
+                setTimeout(autoSlide, 3000);
+              }}
             />
           </div>
         </div>

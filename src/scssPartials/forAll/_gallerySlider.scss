@@ -1,5 +1,6 @@
 // Gallery Slider
 .gallery-section {
+	cursor: pointer;
 	// margin-top: 9em;
 	overflow: hidden;
 	display: flex;
@@ -33,6 +34,7 @@
 
 	// Slider
 	.gallery-slider {
+
 		display: flex;
 		justify-content: center;
 		.slider-image {
@@ -124,85 +126,3 @@
 		}
 	}
 }
-// .single-product-page-carousel {
-//     // background-color: red;
-//     // padding: 0;
-//     // background-image: cover;
-//     // background-repeat: no-repeat;
-//     // background-color: rgb(216, 216, 216);
-//     // // height: 75vh;
-//     // height: 80vh;
-//     // background-position: center;
-//     width: 100%;
-//     position: relative;
-//     // margin-top: 8em;
-//     // //
-//     // display: flex;
-//     // justify-content: center;
-//     z-index: 0;
-//     .display-img{
-//         max-height: 300px;
-//         min-height: 300px;
-//         margin-top: 7.9em;
-//         width: 100%;
-//         height: auto;
-//     }
-//     @media screen and (max-width: 1000px) {
-//         .display-img{
-//             max-height: 600px;
-//             min-height: 600px;
-//         }
-//     }
-//     @media screen and (max-width: 700px) {
-//         .display-img{
-//             max-height: 500px;
-//             min-height: 500px;
-//         }
-//     }
-//     @media screen and (max-width: 500px) {
-//         .display-img{
-//             max-height: 400px;
-//             min-height: 400px;
-//         }
-//     }
-//     .icon {
-//         background-color: rgba(255, 255, 255, 0.522);
-//         height: 30px;
-//         width: 30px;
-//         border-radius: 50%;
-//         color: #fff;
-//     }
-//     .icon:hover {
-//         background-color: #fff;
-//     }
-//     .slider-left-icon {
-//         left: 1em;
-//         transform: translate(0, 300%);
-//     }
-//     .slider-right-icon {
-//         right: 1em;
-//         transform: translate(0, 300%);
-//     }
-//     .slider-dots {
-//         position: absolute;
-//         bottom: 1em;
-//         left: 50%;
-//         transform: translate(-50%);
-//         .dots-icon {
-//             color: #fff;
-//             width: 1.3em;
-//             height: 1.3em;
-//             margin: 0 1.5px;
-//             cursor: pointer;
-//         }
-//         .dots-icon:hover {
-//             color: grey;
-//         }
-//     }
-// }
-
-// @media screen and (min-width: 1001px) {
-//     .single-product-page-carousel {
-//         display: none;
-//     }
-// }

@@ -24,7 +24,7 @@ const ProductCard = ({ item, showBtn, showZoomIcon }) => {
             className="product-thumnail"
           />
           {showZoomIcon && (
-            <GoSearch className="zoom-icon btn_call_quickview" />
+            <GoSearch className="zoom-icon btn_call_quickview " />
           )}
         </div>
         <div className="info">
