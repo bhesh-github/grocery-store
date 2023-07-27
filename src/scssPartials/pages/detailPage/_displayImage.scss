@@ -1,0 +1,45 @@
+.display-img-wrapper {
+  display: flex;
+  padding-left: 1em;
+  .display-big-img-wrapper {
+    overflow: hidden;
+    height: 390px;
+    min-height: 390px;
+    max-height: 390px;
+  }
+  .display-big-img {
+    height: 100%;
+    cursor: crosshair;
+    transition:
+      // transformation speed and style on initial and final transformation
+      scale 300ms ease-out,
+      // speed of image moving around
+      transform 150ms linear;
+  }
+  .diplay-img-carousel {
+    // min-height: 92px;
+    // overflow: visible;
+    // overflow-x: hidden;
+    // max-height: max-content;
+    display: flex;
+    gap: 10px;
+    // flex-wrap: wrap;
+    // border: 1px solid black;
+
+    li {
+      display: inline-block;
+
+      .carousel-image {
+        min-width: 92px;
+        margin: 10px 0;
+        min-height: 92px;
+      }
+      .carousel-image-active {
+        border: 2px solid $mainColor;
+      }
+      .carousel-image-grey {
+        border: 1px solid rgb(217, 217, 217);
+      }
+    }
+  }
+}

@@ -1,15 +1,40 @@
+@import "./verticalMenu";
+
 .header-comp {
   display: flex;
   flex-direction: column;
   gap: 1em;
+  @media screen and (max-width: 765px) {
+    .midbar-container {
+      width: 100%;
+      padding-right: 2.5em;
+      margin: 10px 0;
+    }
+  }
+  .top-bar {
+    .right {
+      display: flex;
+      align-items: center;
+      .login-register {
+        display: flex;
+        align-items: center;
+        margin-top: 5px;
+        li:hover {
+          color: silver !important;
+        }
+      }
+    }
+  }
+
   .middle-bar {
     padding: 0;
-    display: flex;
-    justify-content: space-between;
+    display: flex !important;
+    justify-content: space-between !important;
     align-items: center;
     .brand-logo {
       margin-left: 1em;
       width: 80px;
+      cursor: pointer;
     }
     .biolife-cart-info {
       position: relative;
@@ -58,31 +83,34 @@
 
   .bottom-bar {
     margin-bottom: 1em;
-    // background-color: red;
     .elements-wrapper {
       display: flex;
       justify-content: space-between;
-      .phone-icon {
-        font-size: 30px;
-        color: $mainColor;
+      .header-search-bar {
+        .form-search {
+          .input-text {
+            width: 100%;
+          }
+        }
       }
       .live-info {
         display: flex;
-        // align-items: center;
-        // margin-top: 10px;
-        gap: 10px;
+        .phone-icon {
+          font-size: 30px;
+          color: $mainColor;
+        }
         .telephone {
           display: flex;
           align-items: center;
-          gap: 3px;
           .phone-number {
             font-size: 20px;
             color: #000;
           }
         }
+        .working-time {
+          margin-left: -1.4em;
+        }
       }
     }
   }
 }
-
-// {/* <GoSearch className="zoom-icon btn_call_quickview" /> */}

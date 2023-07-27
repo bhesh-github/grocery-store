@@ -277,6 +277,7 @@ select option{
 }
 .icon-close-menu:before {
     content: "\e905";
+    cursor: pointer;
 }
 .icon-comment:before {
     content: "\e906";
@@ -14106,12 +14107,6 @@ body.open-quickview-block .biolife-quickview-block{
     }
     .biolife-carousel.products-list:not(.default-product-style):hover .slick-list{
         padding-bottom: 150px;
-    }
-    .contain-product.layout-02:hover,
-    .contain-product.layout-default:hover{
-        -webkit-box-shadow: 0 0 5px 0 rgba(0,0,0,0.2);
-        -moz-box-shadow: 0 0 5px 0 rgba(0,0,0,0.2);
-        box-shadow: 0 0 5px 0 rgba(0,0,0,0.2);
     }
     .header-search-bar.layout-01 .input-text{
         max-width: 450px;

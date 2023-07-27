@@ -2,8 +2,10 @@ import React from "react";
 
 const AddsComp = ({ addsImage }) => {
   return (
-    <div className="adds-comp">
-      <img src={addsImage && addsImage} alt="" />
+    <div>
+      <div className="adds-comp">
+        <img className="adds-image" src={addsImage && addsImage} alt="" />
+      </div>
     </div>
   );
 };

@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { useNavigate } from "react-router-dom";
 
 const MiniCart = ({ selectedProducts }) => {
   const [selectedProductsState, setSelectedproductsState] =
@@ -53,15 +54,12 @@ const MiniCart = ({ selectedProducts }) => {
                   className="input-qty"
                   name="cart[id123][qty]"
                   id="cart[id123][qty]"
-                  value="1"
-                  disabled
+                  defaultValue="1"
+                  min="1"
                 />
               </div>
             </div>
             <div className="action">
-              <a href="#" className="edit">
-                <i className="fa fa-pencil" aria-hidden="true"></i>
-              </a>
               <a href="#" className="remove">
                 <i className="fa fa-trash-o" aria-hidden="true"></i>
               </a>
@@ -70,6 +68,7 @@ const MiniCart = ({ selectedProducts }) => {
         </li>
       );
     });
+  const navigate = useNavigate();
   return (
     <div className="minicart-block">
       <div className="minicart-contain">
@@ -87,12 +86,22 @@ const MiniCart = ({ selectedProducts }) => {
           <div className="cart-inner">
             <ul className="products">{productCard && productCard}</ul>
             <p className="btn-control">
-              <a href="#" className="btn view-cart">
+              <span
+                className="btn view-cart"
+                onClick={() => {
+                  navigate("/cart");
+                }}
+              >
                 view cart
-              </a>
-              <a href="#" className="btn">
+              </span>
+              <span
+                className="btn"
+                onClick={() => {
+                  navigate("/checkout");
+                }}
+              >
                 checkout
-              </a>
+              </span>
             </p>
           </div>
         </div>

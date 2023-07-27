@@ -1,12 +1,14 @@
 import React from "react";
+import { useNavigate } from "react-router-dom/dist";
 import { BiLogoTiktok } from "react-icons/bi";
 import { FaFacebookF } from "react-icons/fa";
 
 import { SiInstagram } from "react-icons/si";
 const Topbar = () => {
+  const navigate = useNavigate();
   return (
     <>
-      <div className="header-top bg-main hidden-xs" >
+      <div className="header-top bg-main hidden-xs top-bar">
         <div className="container">
           <div className="top-bar left">
             <ul className="horizontal-menu">
@@ -39,22 +41,15 @@ const Topbar = () => {
                 </a>
               </li>
             </ul>
-            <ul className="horizontal-menu">
-              <li className="horz-menu-item currency">
-                <select name="currency">
-                  {/* <option value="eur">€ EUR (Euro)</option>
-                    <option value="usd" defaultValue="">
-                      $ USD (Dollar)
-                    </option>
-                    <option value="usd">£ GBP (Pound)</option>
-                    <option value="usd">¥ JPY (Yen)</option> */}
-                </select>
-              </li>
-
-              <li>
-                <a href="login.html" className="login-link">
-                  <i className="biolife-icon icon-login"></i>Login/Register
-                </a>
+            <ul className="login-register">
+              <li
+                onClick={() => {
+                  navigate("/register");
+                }}
+                style={{ color: "#fff", cursor: "pointer" }}
+              >
+                <i className="biolife-icon icon-login"> </i>
+                Login/Register
               </li>
             </ul>
           </div>

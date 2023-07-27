@@ -1,0 +1,33 @@
+.mui-tabs {
+  margin-top: 8em;
+  .tab-name {
+    font-size: 16px;
+    font-weight: 600;
+    color: silver;
+  }
+  .css-1h9z7r5-MuiButtonBase-root-MuiTab-root.Mui-selected {
+    color: $mainColor;
+  }
+  .css-1aquho2-MuiTabs-indicator {
+    background-color: $mainColor;
+  }
+}
+.css-ahj2mt-MuiTypography-root {
+  font-size: 15px !important;
+}
+
+@media screen and (max-width: 1199.5px) {
+  .mui-tabs {
+    margin-top: 8em;
+  }
+}
+@media screen and (max-width: 991.5px) {
+  .mui-tabs {
+    margin-top: 5em;
+  }
+}
+@media screen and (max-width: 562px) {
+  .mui-tabs {
+    margin-top: 3em;
+  }
+}

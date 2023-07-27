@@ -3,13 +3,11 @@ import GallerySlider from "../../forAll/GallerySlider";
 import FoodsFilter from "./FoodsFilter";
 import AddsComp from "./AddsComp";
 import LaundryAndHousehold from "./LaundryAndHousehold";
-import QuickDetailViewPopup from "../../forAll/QuickDetailViewPopup";
 const Home = ({ images }) => {
   const addsImage =
     "https://clickmart.com.np/storage/adse/tIdqGhogTepgfB9sgOTe9Bk9v2ZpraOpfEwHf3ED.png";
   return (
     <>
-      <QuickDetailViewPopup />
       <div
         className="index-page"
         style={{
@@ -19,7 +17,9 @@ const Home = ({ images }) => {
         }}
       >
         <GallerySlider images={images} />
-        <MultiCarousel />
+        <div className="multi-carousel">
+          <MultiCarousel />
+        </div>
         <FoodsFilter />
         <AddsComp addsImage={addsImage} />
         <LaundryAndHousehold />

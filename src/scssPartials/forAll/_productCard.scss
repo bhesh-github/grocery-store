@@ -1,5 +1,38 @@
 .product-item {
+  position: relative;
   margin: 0 0.5em;
+  .product-discount {
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: 1;
+    height: 60px;
+    width: 60px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: $mainColor;
+    border: 3px solid white;
+    box-shadow: 1px 2px 2px 1px rgba(128, 128, 128, 0.268);
+    .text {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      color: #fff;
+      rotate: -5deg;
+      .save {
+        font-size: 16px;
+        margin-bottom: -8px;
+        font-weight: 600;
+      }
+      .price {
+        margin-left: 10px;
+        font-size: 16px;
+        font-weight: 700;
+      }
+    }
+  }
   .contain-product {
     .product-thumb {
       .link-to-product {
@@ -26,26 +59,73 @@
       }
     }
     .info {
-      .categories {
-      }
       .product-title {
         .pr-name {
           font-size: 15px;
           color: #000;
+          cursor: pointer;
         }
       }
     }
-    .add-to-card-btn {
-      background-color: $mainColor;
-      font-size: 12px;
-      border-radius: 30px;
-      font-weight: 600;
-      color: #fff;
-      padding: 7px 25px;
-      margin-bottom: 1em;
-    }
-    .add-to-card-btn:hover{
-      background-color: rgb(85, 85, 85);
+    .action-btns-wrapper {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      .add-to-card-btn {
+        background-color: $mainColor;
+        font-size: 12px;
+        border-radius: 30px;
+        font-weight: 600;
+        color: #fff;
+        padding: 7px 25px;
+        margin-bottom: 1em;
+      }
+      .add-to-card-btn:hover {
+        background-color: rgb(85, 85, 85);
+      }
+      .plus-minus-btns-wrapper {
+        margin-bottom: 0.8em;
+        display: flex;
+        height: 35px;
+        border-radius: 30px;
+        width: max-content;
+        overflow: hidden;
+        border: 2px solid rgb(223, 223, 223);
+        .minus {
+          border-right: 1px solid rgb(223, 223, 223);
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          width: 30px;
+          cursor: pointer;
+          font-size: 25px;
+          font-weight: 600;
+          padding-bottom: 5px;
+        }
+        .minus:hover {
+          color: #000;
+        }
+        .input-field {
+          border: none;
+          width: 50px;
+          padding: 0;
+          text-align: center;
+        }
+        .plus {
+          cursor: pointer;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          width: 30px;
+          font-size: 25px;
+          font-weight: 600;
+          border-left: 1px solid rgb(223, 223, 223);
+          padding-bottom: 5px;
+        }
+        .plus:hover {
+          color: #000;
+        }
+      }
     }
   }
 }
@@ -67,7 +147,7 @@
         -o-transition: transform 300ms ease-in-out 100ms;
         transition: transform 300ms ease-in-out 100ms;
       }
-      .zoom-icon:hover{
+      .zoom-icon:hover {
         color: $mainColor;
       }
     }

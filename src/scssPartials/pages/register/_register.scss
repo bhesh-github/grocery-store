@@ -1,0 +1,55 @@
+.login-page {
+  .main-content {
+    .signin-container {
+      .login-form {
+      }
+    }
+  }
+}
+.validation-error {
+  color: red;
+  text-align: left;
+}
+.password-inner-wrapper {
+  position: relative;
+  .eye-icon {
+    position: absolute;
+    cursor: pointer;
+    top: 1em;
+    right: 1.5em;
+  }
+}
+
+.progress-indicator-wrapper {
+  position: fixed;
+  z-index: 99;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  .spinner {
+    color: $mainColor;
+  }
+}
+
+.MuiAlert-message {
+  font-size: 12px;
+  // color: red;
+}
+
+.create-account-form-page {
+  text-align: left;
+  .create-account-form {
+    background-color: red;
+    .label-input-cover {
+      background-color: blue;
+    }
+  }
+}
+.label-input-cover{
+  .eye-icon{
+    position: absolute;
+    top: 38px;
+    right: 1em;
+    cursor: pointer;
+  }
+}

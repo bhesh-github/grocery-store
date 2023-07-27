@@ -1,8 +1,12 @@
 import { configureStore } from "@reduxjs/toolkit";
-import cakeReducer from "./features/cake/cakeSlice";
+import isLoggedIn from "./features/loggingLogout/isLoggedInSlice";
+import currentForm from "./features/currentForm/currentFormSlice";
+import toggleMobileCategoryBar from "./features/toggleMobileCategoryBar/toggleMobileCategoryBarSlice";
 
 export const store = configureStore({
   reducer: {
-    cake: cakeReducer,
+    isLoggedIn: isLoggedIn,
+    currentForm: currentForm,
+    toggleMobileCategoryBar: toggleMobileCategoryBar,
   },
 });

@@ -1,7 +1,4 @@
-
-$mainColor: #E73918;
-
-
+$mainColor: #e73918;
 
 .App {
   text-align: center;
@@ -42,8 +39,17 @@ $mainColor: #E73918;
   }
 }
 
-@import './scssPartials/main/header';
-@import './scssPartials/pages/home/home';
-@import './scssPartials/forAll/multiCarousel';
-@import './scssPartials/forAll/gallerySlider';
-@import './scssPartials/forAll/quickDetailViewPopup';
+@import "./scssPartials/main/header";
+@import "./scssPartials/pages/home/home";
+@import "./scssPartials/forAll/multiCarousel";
+@import "./scssPartials/forAll/gallerySlider";
+@import "./scssPartials/forAll/quickDetailViewPopup";
+@import "./scssPartials/pages/detailPage/detailPage";
+@import "./scssPartials/forAll/productCard";
+@import "./scssPartials/forAll/muiTabs";
+@import "./scssPartials/forAll/modalCart";
+@import "./scssPartials/pages/cart/cart";
+@import "./scssPartials/pages/checkout/checkout";
+@import "./scssPartials/pages/register/register";
+@import "./scssPartials/pages/products/products";
+@import "./scssPartials/pages/footer/footer";

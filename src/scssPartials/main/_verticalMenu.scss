@@ -1,0 +1,243 @@
+// ------------------------------------------------------------------------------
+// @charset "utf-8";
+/* CSS Document */
+
+// body {
+//   background-color: #ffffff;
+// }
+
+/* pull-down mainmenu css */
+
+.vertical-menu {
+  .block-title {
+    display: flex;
+    align-items: center;
+    .react-menu-icon{
+        color: #fff;
+        width: 30px;
+        height: 30px;
+        margin-right: 10px;
+    }
+    .angle {
+      .caret-icon {
+        width: 18px;
+        height: 18px;
+      }
+    }
+  }
+}
+
+// ------------CODE PEN STARTS------------------------------
+.mainmenu {
+  position: absolute;
+  z-index: 99;
+  width: 100%;
+  padding: 0;
+  float: left;
+  text-align: left;
+}
+.mainmenu {
+  .main-ul {
+    border-radius: 0px 0px 10px 10px;
+  }
+}
+.mainmenu ul {
+  float: left;
+  width: 100%;
+  list-style: none;
+  line-height: 1;
+  color: #000;
+  background: #fff;
+  padding: 0;
+  margin: 0 0 0 0;
+  box-shadow: 1px 2px 5px 1px rgba(195, 195, 195, 0.533);
+}
+
+.mainmenu .nav-link,
+.mainmenu .nav-link:visited {
+  display: block;
+  width: 100%;
+  font-family: "Yantramanav", sans-serif;
+  font-weight: 300;
+  font-size: 1.2;
+  font-style: normal;
+  text-decoration: underline;
+  color: #000;
+  text-decoration: none;
+  padding: 1em 0em;
+  text-indent: 1em;
+  margin: 0;
+  //
+  display: flex;
+  flex-direction: column;
+  .text-icon-wrapper {
+    display: flex;
+    justify-content: space-between;
+    padding-right: 1em;
+    align-items: center;
+  }
+  .dashed-line {
+    align-self: center;
+    // height: 5px;
+    margin-top: 1em;
+    margin-bottom: -1em;
+    width: 87%;
+    border-bottom: 1px dashed silver;
+  }
+}
+.mainmenu li li.nav-link {
+  padding: 1em;
+  text-indent: 0;
+  //
+}
+.mainmenu ul ul.nav-link {
+  width: 100%;
+  height: 100%;
+}
+.mainmenu ul.nav-link {
+  width: 100%;
+}
+
+.mainmenu li {
+  float: left;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+.mainmenu ul li {
+  float: left;
+  position: relative;
+}
+.mainmenu ul li {
+  width: 100%;
+} /* !!!!! */
+
+.mainmenu li ul {
+  position: absolute;
+  left: -999em;
+  height: auto;
+  width: 15em;
+  background: #fff;
+  font-weight: normal;
+  border-width: 1px;
+  margin: 0;
+}
+
+.mainmenu li li {
+  width: 100%;
+}
+.mainmenu li {
+  width: 100%;
+}
+.mainmen.nav-linku li li.nav-link {
+  width: 100%;
+}
+
+.mainmenu li ul {
+  margin: -2.1em 0 0 -0.3em;
+}
+.mainmenu li ul ul {
+  margin: -2.1em 0 0 -0.3em;
+}
+.ul_ch,
+.mainmenu li:hover ul ul,
+.mainmenu li li:hover ul ul,
+.mainmenu li li li:hover ul ul,
+.mainmenu li li li li:hover ul ul,
+.mainmenu li li li li li:hover ul ul {
+  left: -999em;
+}
+.mainmenu li:hover ul,
+.mainmenu li li:hover ul,
+.mainmenu li li li:hover ul,
+.mainmenu li li li li:hover ul,
+.mainmenu li li li li li:hover ul {
+  left: 100%; /* !!! */
+}
+.mainmenu li:hover > ul.ul_ch {
+  left: 100%; /* !!! */
+}
+
+.mainmenu li:hover {
+}
+
+.mainmenu li:hover .nav-link,
+.mainmenu li:hover .nav-link:visited,
+.mainmenu li:hover .nav-link:hover,
+.mainmenu li .nav-link:hover {
+  color: $mainColor;
+}
+.mainmenu li:hover li .nav-link,
+.mainmenu li li:hover li .nav-link,
+.mainmenu li li li:hover li .nav-link,
+.mainmenu li li li li:hover li .nav-link,
+.mainmenu li:hover li .nav-link:visited,
+.mainmenu li li:hover li .nav-link:visited,
+.mainmenu li li li:hover li .nav-link:visited,
+.mainmenu li li li li:hover li .nav-link:visited {
+  color: #000;
+}
+.mainmenu li li:hover,
+.mainmenu li li li:hover,
+.mainmenu li li li li:hover,
+.mainmenu li li li li li:hover,
+.mainmenu li li li li li li:hover {
+  background: #fff;
+  z-index: 9999;
+}
+.mainmenu li li:hover .nav-link,
+.mainmenu li li li:hover .nav-link,
+.mainmenu li li li li:hover .nav-link,
+.mainmenu li li li li li:hover.nav-link {
+  color: $mainColor;
+}
+
+.mainmenu ul ul .nav-link,
+.mainmenu ul ul .nav-link:visited,
+.mainmenu li li .nav-link,
+.mainmenu li li .nav-link:visited {
+  color: #000;
+}
+.mainmenu ul ul .nav-link:hover,
+.mainmenu li:hover li:hover .nav-link,
+.mainmenu li:hover li:hover .nav-link:visited,
+.mainmenu li:hover li:hover li:hover .nav-link,
+.mainmenu li:hover li:hover li:hover .nav-link:visited,
+.mainmenu li:hover li:hover li:hover li:hover .nav-link,
+.mainmenu li:hover li:hover li:hover li:hover .nav-link:visited,
+.mainmenu li:hover li:hover li:hover li:hover li:hover .nav-link,
+.mainmenu li:hover li:hover li:hover li:hover li:hover .nav-link:visited,
+.mainmenu li:hover li:hover li:hover li:hover li:hover li:hover .nav-link,
+.mainmenu
+  li:hover
+  li:hover
+  li:hover
+  li:hover
+  li:hover
+  li:hover
+  .nav-link:visited {
+  color: $mainColor;
+}
+.mainmenu li:hover li:hover li .nav-link,
+.mainmenu li:hover li:hover li .nav-link:visited,
+.mainmenu li:hover li:hover li:hover li .nav-link,
+.mainmenu li:hover li:hover li:hover li .nav-link:visited,
+.mainmenu li:hover li:hover li:hover li:hover li .nav-link,
+.mainmenu li:hover li:hover li:hover li:hover li .nav-link:visited,
+.mainmenu li:hover li:hover li:hover li:hover li:hover li .nav-link,
+.mainmenu li:hover li:hover li:hover li:hover li:hover li .nav-link:visited {
+  color: #000;
+}
+// ------------CODE PEN ENDS------------------------------
+
+// {/* <GoSearch className="zoom-icon btn_call_quickview" /> */}
+
+ul {
+  li {
+    list-style-type: none;
+    color: #000;
+  }
+}
+
+//

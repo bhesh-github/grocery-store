@@ -1,0 +1,29 @@
+.action-form {
+  .kilogram-wrapper {
+    margin: 1em 0;
+    .lable {
+      font-weight: 600;
+      color: #000;
+    }
+  }
+  .buttons {
+    .mini-btns {
+      margin-top: 1em;
+      .wishlist-btn {
+        cursor: pointer;
+      }
+      .wishlist-btn:hover {
+        color: $mainColor;
+      }
+      .checkout-btn {
+        cursor: pointer;
+        .cart-icon{
+          margin-right: 5px;
+        }
+      }
+      .checkout-btn:hover {
+        color: $mainColor;
+      }
+    }
+  }
+}

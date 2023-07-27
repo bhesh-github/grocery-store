@@ -1,0 +1,26 @@
+.cart-page {
+  .product-quantity {
+    .quantity-box {
+      .qty-input {
+        // border: 1px solid black;
+        // border-radius: 30px;
+        // height: 50px;
+        // width: 100px;
+        .qty-btn:hover {
+          color: #000;
+        }
+      }
+      .qty-input-field {
+        text-align: center;
+        border: 1px solid black;
+        border-radius: 30px;
+        height: 40px;
+        width: 100px;
+      }
+    }
+  }
+  .shpcart-subtotal-block{
+    text-align: left;
+  }
+}
+
