@@ -41,9 +41,16 @@ const DisplayImage = ({ displayImageList }) => {
     );
 
     for (let i = 0; i < nodeIndex; i++) {
+      console.log(
+        "----------------",
+        i,
+        document.getElementById(`display_img_carousel`)
+      );
       document
-        .getElementById(`diplay_img_carousel`)
-        .appendChild(document.getElementById(`diplay_img_carousel`).firstChild);
+        .getElementById(`display_img_carousel`)
+        .appendChild(
+          document.getElementById(`display_img_carousel`).children[0]
+        );
     }
   };
 
@@ -87,7 +94,7 @@ const DisplayImage = ({ displayImageList }) => {
       <div className="carousel-outer">
         <ul
           className="display-img-carousel"
-          id="diplay_img_carousel"
+          id="display_img_carousel"
           data-slick='{"arrows":false,"dots":false,"centerMode":false,"focusOnSelect":true,"slidesMargin":10,"slidesToShow":4,"slidesToScroll":1,"asNavFor":".slider-for"}'
         >
           {displayImageList &&

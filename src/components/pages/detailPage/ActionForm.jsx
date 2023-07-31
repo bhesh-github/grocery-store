@@ -7,7 +7,7 @@ const ActionForm = ({ selectedQty, setSelectedQty, currentPrice }) => {
   return (
     <div className="action-form" style={{ textAlign: "center" }}>
       <div className="quantity-box">
-        <div className="kilogram-wrapper" style={{ overflow: "hidden" }}>
+        {/* <div className="kilogram-wrapper" style={{ overflow: "hidden" }}>
           <span className="lable">Gram: </span>
           <span>
             <input
@@ -19,7 +19,7 @@ const ActionForm = ({ selectedQty, setSelectedQty, currentPrice }) => {
               }}
             />
           </span>
-        </div>
+        </div> */}
         <span className="title">Quantity:</span>
         <div className="qty-input">
           <input

@@ -1,0 +1,96 @@
+.delivery-brief {
+  .message {
+    text-align: left;
+    color: #000;
+    font-size: 13px !important;
+  }
+  .form {
+    margin-top: 2em;
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+    .label-input-wrapper {
+      display: flex;
+      font-size: 12.5px;
+      flex-direction: column;
+      text-align: left;
+      gap: 5px;
+      .question {
+        font-weight: 600;
+        color: #424242;
+      }
+      .caution {
+        color: rgb(100, 100, 100);
+      }
+    }
+    .state-post-code-wrapper {
+      display: flex;
+      gap: 2em;
+      .select-btn {
+        display: flex;
+        flex-direction: column;
+        font-size: 12.5px;
+        font-weight: 600;
+        gap: 5px;
+        align-items: flex-start;
+        color: #424242;
+        .dropdown-btn {
+          color: #000;
+          border: 1px solid rgb(218, 218, 218);
+          font-weight: 500;
+        }
+        .validation-error {
+          display: flex;
+          flex-direction: column;
+          font-size: 12.5px;
+          padding-left: 0.7em;
+          font-weight: 500;
+        }
+        .title {
+          font-size: 12.5px;
+          font-weight: 600;
+          color: #424242;
+        }
+        .select-name {
+          .state-name {
+            background-color: red;
+            color: red !important;
+          }
+        }
+      }
+      .postal-code {
+        width: 180px;
+      }
+    }
+    @media screen and (max-width: 523.5px) {
+      .state-post-code-wrapper {
+        flex-direction: column;
+      }
+    }
+    .btn-wrapper {
+      margin-top: 1em;
+      display: flex;
+      gap: 1em;
+      justify-content: flex-end;
+      .action-btn {
+        width: 200px;
+        color: #424242;
+        border: 1.5px solid #424242;
+        text-transform: capitalize;
+        font-size: 12.5px;
+        font-weight: 600;
+      }
+      .action-btn:hover {
+        background-color: $mainColor;
+        color: #fff;
+        border: none;
+      }
+      .cancel-btn {
+        width: 120px;
+      }
+      .cancel-btn:hover {
+        background-color: #424242;
+      }
+    }
+  }
+}

@@ -1,23 +1,25 @@
 import React, { useState } from "react";
-import ProductCard from "../../forAll/ProductCard";
-import ModalCart from "../../forAll/modalCart/ModalCart";
 import { useNavigate } from "react-router-dom";
+
+import ModalCart from "../../forAll/modalCart/ModalCart";
+import ProductCard from "../../forAll/ProductCard";
 
 const LaundryAndHousehold = ({ laundryAndHousehold }) => {
   const [modalCartDataState, setModalCartDataState] = useState({
-    type: "",
     id: "",
   });
-  const selectedCartData =
-    laundryAndHousehold &&
-    laundryAndHousehold.find((item) => {
-      return item.id === modalCartDataState.id;
-    });
   const [isDisplayedClass, setIsDisplayedClass] = useState("none");
-  const displayProducts =
+
+  const navigate = useNavigate();
+
+  const selectedCartData = laundryAndHousehold.find(
+    (item) => item.id === modalCartDataState.id
+  );
+  const filteredProducts =
     laundryAndHousehold &&
-    laundryAndHousehold.map((item) => {
-      return (
+    laundryAndHousehold
+      .slice(0, 20)
+      .map((item) => (
         <ProductCard
           item={item}
           showBtn={true}
@@ -26,15 +28,13 @@ const LaundryAndHousehold = ({ laundryAndHousehold }) => {
           setModalCartDataState={setModalCartDataState}
           setIsDisplayedClass={setIsDisplayedClass}
         />
-      );
-    });
-  const navigate = useNavigate();
+      ));
   return (
     <>
       <div className="laundry-and-household-comp">
         <h1 className="heading">Laundry And Household</h1>
-        <div className="product-cards-wrapper">
-          {displayProducts && displayProducts}
+        <div className="product-cards-wrapper" id="products-top">
+          {filteredProducts && filteredProducts}
         </div>
         <button
           className="see-more-btn"

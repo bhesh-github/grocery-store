@@ -5,9 +5,8 @@ import ForgotPassword from "./ForgotPassword";
 import CreateAccountForm from "./CreateAccountForm";
 import { useSelector, useDispatch } from "react-redux";
 import FormSubmissionAlert from "../../forAll/FromSubmissionAlert";
-import {
-  createAccountFormReducer,
-} from "../../../store/features/currentForm/currentFormSlice";
+import { createAccountFormReducer } from "../../../store/features/currentForm/currentFormSlice";
+
 const Register = () => {
   const [formSubmitting, setFormSubmitting] = useState(false);
   const [open, setOpen] = useState(false);
@@ -54,7 +53,8 @@ const Register = () => {
                   />
                 )}
               </div>
-              {currentForm !== "createAccountForm" && (
+              {(currentForm === "loginForm" ||
+                currentForm === "forgotPasswordForm") && (
                 <div className="col-lg-6 col-md-6 col-sm-6 col-xs-12">
                   <div className="register-in-container">
                     <div className="intro">

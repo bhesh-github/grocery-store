@@ -46,11 +46,15 @@ export default function BasicTabs({ productInformation }) {
 
   return (
     <Box sx={{ width: "100%" }} className="mui-tabs">
-      <Box sx={{ borderBottom: 1, borderColor: "divider" }}>
+      <Box sx={{borderBottom: 1, borderColor: "divider" }}>
         <Tabs
+          className="tabs"
           value={value}
           onChange={handleChange}
-          aria-label="basic tabs example"
+          variant="scrollable"
+          scrollButtons="auto"
+          allowScrollButtonsMobile
+          aria-label="scrollable auto tabs example"
         >
           {productInformation &&
             productInformation.map((item, idx) => {
@@ -71,7 +75,12 @@ export default function BasicTabs({ productInformation }) {
         productInformation.map((item, idx) => {
           const { id = "", brief = "" } = item;
           return (
-            <CustomTabPanel value={value} index={idx} key={id}  className="tab-description">
+            <CustomTabPanel
+              value={value}
+              index={idx}
+              key={id}
+              className="tab-description"
+            >
               {brief}
             </CustomTabPanel>
           );

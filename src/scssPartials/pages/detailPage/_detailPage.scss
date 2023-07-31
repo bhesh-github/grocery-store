@@ -3,7 +3,7 @@
 
 .related-products-section {
   margin-bottom: 2em;
-  margin-left: 1em;
+  // margin-left: 1em;
   .main-title {
     color: $mainColor;
     text-align: center;
@@ -11,15 +11,18 @@
     font-weight: 700;
   }
   .product-cards-wrapper {
+    padding: 0;
     margin-top: 5px;
-    padding: 0 2em;
+    width: 100%;
     justify-content: center;
     list-style-type: none;
     .contain-product {
-      margin: 0 1em;
+      position: relative;
       text-align: center;
-      padding: 10px;
       .product-thumb {
+        display: flex;
+        margin-top: -5px;
+        margin-left: -6px;
         overflow: hidden;
         min-width: 210px;
         min-height: 210px;

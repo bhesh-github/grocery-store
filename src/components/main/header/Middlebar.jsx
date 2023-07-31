@@ -1,26 +1,130 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom/dist";
-import Notification from "./Notification";
-import MiniCart from "./MiniCart";
+import { useDispatch, useSelector } from "react-redux";
+// import { TbTruckDelivery } from "react-icons/tb";
+import { RiShoppingCart2Line } from "react-icons/ri";
+import { SlArrowLeft } from "react-icons/sl";
+import { CiSearch } from "react-icons/ci";
+import { RxCross2 } from "react-icons/rx";
+import { BiSearch } from "react-icons/bi";
+import ProgressIndicator from "../../forAll/ProgressIndicator";
 import BrandLogo from "../../../images/forAll/brandlogo.png";
-import { useDispatch } from "react-redux";
+import AccountMenu from "../../forAll/accountMenu/AccountMenu";
 import { toggleMobileCategoryBar } from "../../../store/features/toggleMobileCategoryBar/toggleMobileCategoryBarSlice";
+import { TfiClose } from "react-icons/tfi";
+import { GiHamburgerMenu } from "react-icons/gi";
+// import AddShoppingCartIcon from "@mui/icons-material/AddShoppingCart";
 
+const Middlebar = ({ categoryList }) => {
+  const [logginOut, setLogginOut] = useState(false);
+  const [isSearching, setIsSearching] = useState(false);
+  const [mobileSearchInputValue, setMobileSearchInputValue] = useState("");
+  const [isMobileSearchInput, setIsMobileSearchInput] = useState(false);
 
-const Middlebar = () => {
-  const [midBarSearchInput, setMidBarSearchInput] = useState("");
-  const handleFormSubmit = (e) => {
-    e.preventDefault();
-    setTimeout(() => {
-      setMidBarSearchInput("");
-    }, 1000);
+  const isLoggedIn = useSelector((state) => state.isLoggedIn.isLoggedInState);
+  
+  // const [midBarSearchInput, setMidBarSearchInput] = useState("");
+  // const handleFormSubmit = (e) => {
+  //   e.preventDefault();
+  //   setTimeout(() => {
+  //     setMidBarSearchInput("");
+  //   }, 1000);
+  // };
+  const handleMobileSearch = () => {
+    mobileSearchInputValue !== "" && setIsSearching(true);
+    mobileSearchInputValue !== "" &&
+      setTimeout(() => {
+        setIsSearching(false);
+        setMobileSearchInputValue("");
+        setIsMobileSearchInput(false);
+      }, 2000);
   };
   const navigate = useNavigate();
   const dispatch = useDispatch();
 
+  const toggleMobileCategory = useSelector(
+    (state) => state.toggleMobileCategoryBar.toggleMobileCategoryBarState
+  );
+  isMobileSearchInput || toggleMobileCategory
+    ? (document.body.style.overflowY = "hidden")
+    : (document.body.style.overflowY = "scroll");
+
   return (
     <>
+      {logginOut ||
+        (isSearching && (
+          <div className="progress-indicator-comp">
+            <ProgressIndicator />
+          </div>
+        ))}
+      {toggleMobileCategory && (
+        <>
+          <div
+            className="mobile-category-bar-overlay"
+            onClick={() => {
+              dispatch(toggleMobileCategoryBar());
+            }}
+          ></div>
+          <div className="mobile-category-bar">
+            <TfiClose
+              className="close-icon"
+              onClick={() => {
+                dispatch(toggleMobileCategoryBar());
+              }}
+            />
+            <div className="category-bar">
+              {categoryList &&
+                categoryList.map((item, idx) => {
+                  const { name = "", category = "" } = item;
+                  return (
+                    <div key={idx} className="category-section">
+                      <h4 className="category-name">{name}</h4>
+                      {category.map((item, idx) => (
+                        <span className="cat" key={idx}>
+                          {item}
+                        </span>
+                      ))}
+                    </div>
+                  );
+                })}
+            </div>
+          </div>
+        </>
+      )}
       <div className="container midbar-container">
+        {isMobileSearchInput && (
+          <div className="search-overlay">
+            <div className="wrapper">
+              <SlArrowLeft
+                className="back-arrow-icon"
+                onClick={() => {
+                  setIsMobileSearchInput(false);
+                }}
+              />
+              <span className="search-input-wrapper">
+                <input
+                  value={mobileSearchInputValue}
+                  onChange={(e) => {
+                    setMobileSearchInputValue(e.target.value);
+                  }}
+                  type="search"
+                  className="search-input"
+                  placeholder="Search here . ."
+                />
+                <CiSearch className="search-icon" />
+                <RxCross2
+                  className="cross-icon"
+                  onClick={() => {
+                    setMobileSearchInputValue("");
+                  }}
+                />
+              </span>
+              <span className="text" onClick={handleMobileSearch}>
+                Search
+              </span>
+            </div>
+          </div>
+        )}
         <div className="middle-bar">
           <img
             className="brand-logo"
@@ -29,69 +133,49 @@ const Middlebar = () => {
             style={{ width: "80px" }}
             onClick={() => {
               navigate("/");
-              console.log("xxx");
             }}
           />
-       
-          <div className="biolife-cart-info">
-            <div className="mobile-search">
-              <a href="#a" className="open-searchbox">
-                <i
-                  className="biolife-icon icon-search"
-                  style={{ marginRight: "0.5em" }}
-                ></i>
-              </a>
-              <div className="mobile-search-content">
-                <form
-                  className="form-search"
-                  name="mobile-search"
-                  onSubmit={(e) => {
-                    handleFormSubmit(e);
-                  }}
-                >
-                  <span className="btn-close">
-                    <span
-                      className="biolife-icon icon-close-menu"
-                      onClick={() => {
-                        setMidBarSearchInput("");
-                      }}
-                    ></span>
-                  </span>
-                  <input
-                    type="text"
-                    name="s"
-                    className="input-text"
-                    value={midBarSearchInput}
-                    onChange={(e) => {
-                      setMidBarSearchInput(e.target.value);
-                    }}
-                    placeholder="Search here..."
-                  />
-                  <button type="submit" className="btn-submit">
-                    go
-                  </button>
-                </form>
-              </div>
+          <div className="icons-wrapper">
+            {/* <TbTruckDelivery
+              onClick={() => {
+                navigate("/delivery-form");
+              }}
+              className="delivery-icon biolife-icon"
+            /> */}
+            <BiSearch
+              className="search-icon biolife-icon"
+              onClick={() => {
+                setIsMobileSearchInput(true);
+              }}
+            />
+            <RiShoppingCart2Line
+              style={{
+                color: "rgb(68, 68, 68)",
+                width: "30px",
+                height: "25px",
+              }}
+              className="cart-icon"
+              onClick={() => {
+                navigate("/cart");
+              }}
+            />
+            <div className="account-menu-comp">
+              <AccountMenu setLogginOut={setLogginOut} />
             </div>
-           
-            <Notification />
-            <MiniCart />
-            <div
-              className="mobile-menu-toggle"
-              style={{ cursor: "pointer" }}
+            {/* {isLoggedIn ? (
+              <div className="account-menu-comp">
+                <AccountMenu setLogginOut={setLogginOut} />
+              </div>
+            ) : (
+              <ProfileMenu />
+            )} */}
+            <GiHamburgerMenu
+              className="hamburger-icon"
               onClick={() => {
                 dispatch(toggleMobileCategoryBar());
               }}
-            >
-              <div className="btn-toggle">
-                <span></span>
-                <span></span>
-                <span></span>
-              </div>
-            </div>
-            
+            />
           </div>
-          
         </div>
       </div>
     </>
@@ -99,3 +183,43 @@ const Middlebar = () => {
 };
 
 export default Middlebar;
+Middlebar.defaultProps = {
+  categoryList: [
+    {
+      name: "SHOP HOME",
+      category: [
+        "Specials",
+        "My Last Order",
+        "My Frequent Purchases",
+        "Suggested",
+      ],
+    },
+    {
+      name: "ALL DEPARTMENTS",
+      category: [
+        "Vegetables",
+        "Organic Products",
+        "Bread",
+        "Frozen Meats",
+        "Biscuits",
+        "Drinks",
+        "Sweets",
+        "Dairy",
+        "Snacks & Chips",
+        "Instant Mix",
+        "Spices",
+        "Pickles",
+        "Noodles",
+        "Oil & Ghee",
+        "Dry Fruits & Nuts",
+        "Tea & Coffee",
+        "Rice & Atta",
+        "Lentils",
+        "Pooja Items",
+        "Washing & Cleaning Needs",
+        "Household Items",
+        "Seasonal Items",
+      ],
+    },
+  ],
+};

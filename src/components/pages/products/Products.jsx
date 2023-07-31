@@ -1,7 +1,4 @@
 import React, { useState, useEffect } from "react";
-import { TfiClose } from "react-icons/tfi";
-import { useDispatch, useSelector } from "react-redux";
-import { toggleMobileCategoryBar } from "../../../store/features/toggleMobileCategoryBar/toggleMobileCategoryBarSlice";
 import ProductCard from "../../forAll/ProductCard";
 import ModalCart from "../../forAll/modalCart/ModalCart";
 
@@ -49,50 +46,8 @@ const Products = ({ productsList, categoryList }) => {
     window.addEventListener("scroll", handleInfiniteScroll);
   }, []);
 
-  const toggleMobileCategory = useSelector(
-    (state) => state.toggleMobileCategoryBar.toggleMobileCategoryBarState
-  );
-  const dispatch = useDispatch();
-  toggleMobileCategory
-    ? (document.body.style.overflowY = "hidden")
-    : (document.body.style.overflowY = "scroll");
   return (
     <>
-      {toggleMobileCategory && (
-        <>
-          <div
-            className="mobile-category-bar-overlay"
-            onClick={() => {
-              dispatch(toggleMobileCategoryBar());
-            }}
-          ></div>
-          <div className="mobile-category-bar">
-            <TfiClose
-              className="close-icon"
-              onClick={() => {
-                dispatch(toggleMobileCategoryBar());
-              }}
-            />
-            <div className="category-bar">
-              {categoryList &&
-                categoryList.map((item, idx) => {
-                  const { name = "", category = "" } = item;
-                  return (
-                    <div key={idx} className="category-section">
-                      <h4 className="category-name">{name}</h4>
-                      {category.map((item, idx) => (
-                        <span className="cat" key={idx}>
-                          {item}
-                        </span>
-                      ))}
-                    </div>
-                  );
-                })}
-            </div>
-          </div>
-        </>
-      )}
-
       <div className="products-page">
         <div className="content">
           <div className="category-bar">

@@ -18,7 +18,7 @@ const MiniCart = ({ selectedProducts }) => {
         <li key={id}>
           <div className="minicart-item">
             <div className="thumb">
-              <a href="#">
+              <a href="#s">
                 <img
                   src={image_link}
                   width="90"
@@ -29,7 +29,7 @@ const MiniCart = ({ selectedProducts }) => {
             </div>
             <div className="left-info">
               <div className="product-title">
-                <a href="#" className="product-name">
+                <a href="#s" className="product-name">
                   {name}
                 </a>
               </div>
@@ -60,7 +60,7 @@ const MiniCart = ({ selectedProducts }) => {
               </div>
             </div>
             <div className="action">
-              <a href="#" className="remove">
+              <a href="#s" className="remove">
                 <i className="fa fa-trash-o" aria-hidden="true"></i>
               </a>
             </div>
@@ -72,16 +72,27 @@ const MiniCart = ({ selectedProducts }) => {
   return (
     <div className="minicart-block">
       <div className="minicart-contain">
-        <a href="#a" className="link-to">
+        <span
+          onClick={() => {
+            navigate("/cart");
+          }}
+          style={{ cursor: "pointer" }}
+          className="link-to"
+        >
           <span className="icon-qty-combine">
-            <i className="icon-cart-mini biolife-icon"></i>
+            <i
+              className="icon-cart-mini biolife-icon"
+              style={{
+                fontSize: "20px",
+              }}
+            ></i>
             <span className="qty">
               {selectedProductsState && selectedProductsState.length}
             </span>
           </span>
           <span className="title">My Cart -</span>
           <span className="sub-total">$0.00</span>
-        </a>
+        </span>
         <div className="cart-content">
           <div className="cart-inner">
             <ul className="products">{productCard && productCard}</ul>

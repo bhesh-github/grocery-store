@@ -49,8 +49,8 @@ const ProductCard = ({
                 onClick={() => {
                   setModalCartDataState((prev) => ({
                     ...prev,
-                    id: id,
-                    type: type,
+                    id: id && id,
+                    type: type && type,
                   }));
                   setIsDisplayedClass("");
                 }}

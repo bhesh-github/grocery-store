@@ -3,6 +3,7 @@ import { BsEye, BsEyeSlash } from "react-icons/bs";
 import { useNavigate } from "react-router-dom";
 import { useDispatch } from "react-redux";
 import { forgotPasswordFormReducer } from "../../../store/features/currentForm/currentFormSlice";
+import { loginReducer } from "../../../store/features/loggingLogout/isLoggedInSlice";
 const inputObj = {
   email: "",
   password: "",
@@ -11,7 +12,6 @@ const Login = ({ setFormSubmitting, setCurrentForm }) => {
   const [signinInput, setSigninInput] = useState(inputObj);
   const [formErrors, setFormErrors] = useState({});
   const [isSubmit, setIsSubmit] = useState(false);
-
   const [togglePasword, setTogglePassword] = useState({
     password: false,
     confirmPassword: false,
@@ -58,6 +58,7 @@ const Login = ({ setFormSubmitting, setCurrentForm }) => {
         email: "",
         password: "",
       }));
+      dispatch(loginReducer());
       navigate("/");
       setFormSubmitting(false);
       // setOpen(true);

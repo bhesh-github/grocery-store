@@ -1,9 +1,19 @@
 .mui-tabs {
   margin-top: 8em;
-  .tab-name {
-    font-size: 16px;
-    font-weight: 600;
-    color: silver;
+  .MuiButtonBase-root{
+    background-color: #fff;
+    .MuiSvgIcon-root{
+      background-color: #fff;
+      width: 30px;
+      height: 30px;
+    }
+  }
+  .tabs {
+    .tab-name {
+      font-size: 16px;
+      font-weight: 600;
+      color: silver;
+    }
   }
   .css-1h9z7r5-MuiButtonBase-root-MuiTab-root.Mui-selected {
     color: $mainColor;
