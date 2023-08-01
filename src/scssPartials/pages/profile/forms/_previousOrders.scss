@@ -122,31 +122,31 @@
     }
   }
 
-  .btn-wrapper {
-    margin-top: 1em;
-    display: flex;
-    gap: 1em;
-    justify-content: flex-end;
-    .action-btn {
-      width: 200px;
-      color: #424242;
-      border: 1.5px solid #424242;
-      text-transform: capitalize;
-      font-size: 12.5px;
-      font-weight: 600;
-    }
-    .action-btn:hover {
-      background-color: $mainColor;
-      color: #fff;
-      border: none;
-    }
-    .cancel-btn {
-      width: 120px;
-    }
-    .cancel-btn:hover {
-      background-color: #424242;
-    }
-  }
+  // .btn-wrapper {
+  //   margin-top: 1em;
+  //   display: flex;
+  //   gap: 1em;
+  //   justify-content: flex-end;
+  //   .action-btn {
+  //     width: 200px;
+  //     color: #424242;
+  //     border: 1.5px solid #424242;
+  //     text-transform: capitalize;
+  //     font-size: 12.5px;
+  //     font-weight: 600;
+  //   }
+  //   .action-btn:hover {
+  //     background-color: $mainColor;
+  //     color: #fff;
+  //     border: none;
+  //   }
+  //   .cancel-btn {
+  //     width: 120px;
+  //   }
+  //   .cancel-btn:hover {
+  //     background-color: #424242;
+  //   }
+  // }
 }
 
 @media screen and (max-width: 766.5px) {

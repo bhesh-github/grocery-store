@@ -191,7 +191,7 @@ const PreviousOrders = ({
             />
           </div>
         </div>
-        <div className="btn-wrapper">
+        {/* <div className="btn-wrapper">
           <Button
             onClick={handleSave}
             type="submit"
@@ -207,7 +207,7 @@ const PreviousOrders = ({
           >
             Cancel
           </Button>
-        </div>
+        </div> */}
       </div>
     </>
   );

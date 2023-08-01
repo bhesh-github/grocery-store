@@ -18,8 +18,10 @@ const inputObj = {
   company_name: "",
   website_name: "",
 };
-const ProfileSetting = ({ setIsSubmitting }) => {
+const ProfileSetting = ({ setIsSubmitting, setProfileImg }) => {
   const [inputValue, setInputValue] = useState(inputObj);
+  inputValue.profile_img && setProfileImg(inputValue.profile_img);
+
   const [formErrors, setFormErrors] = useState({});
   const [isSubmit, setIsSubmit] = useState(false);
 

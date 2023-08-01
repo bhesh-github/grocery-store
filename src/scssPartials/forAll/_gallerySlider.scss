@@ -1,139 +1,80 @@
 // Gallery Slider
-.gallery-section {
-  cursor: pointer;
-  overflow: hidden;
-  display: flex;
-  //   gap: 0.6em;
-  //   gap: 2em;
-  height: 300px;
-  width: 95vw;
-  //   width: 100%;
-  .display-image {
-    border-radius: 20px;
-    width: 100%;
-    height: 100%;
-    background-color: rgb(234, 234, 234);
-    .img {
+@media screen and (max-width: 767.5px) {
+  .container {
+    padding-left: 0;
+    padding-right: 0;
+  }
+}
+.desktop-slider {
+  .gallery-section {
+    cursor: pointer;
+    overflow: hidden;
+    display: flex;
+    //   gap: 0.6em;
+    //   gap: 2em;
+    height: 300px;
+    width: 95vw;
+    //   width: 100%;
+    .display-image {
       border-radius: 20px;
       width: 100%;
       height: 100%;
-    }
-  }
-}
-@media screen and (max-width: 767.5px) {
-  .gallery-section {
-    width: 100%;
-    .display-image {
-      border-radius: 0;
+      background-color: rgb(234, 234, 234);
       .img {
-        border-radius: 0;
+        border-radius: 20px;
+        width: 100%;
+        height: 100%;
       }
     }
   }
-}
-@media screen and (max-width: 767.5px) {
-  .gallery-section {
-    margin-bottom: 1.5em;
+  @media screen and (max-width: 767.5px) {
+    .gallery-section {
+      width: 100%;
+      .display-image {
+        border-radius: 0;
+        .img {
+          border-radius: 0;
+        }
+      }
+    }
+  }
+  @media screen and (max-width: 767.5px) {
+    .gallery-section {
+      margin-bottom: 1.5em;
+    }
   }
 }
-// .slider-overlay {
-//   position: absolute;
-//   z-index: 1000;
-//   top: 0;
-//   left: 0;
-//   height: 100%;
-//   width: 100%;
-//   background-color: rgba(0, 0, 0, 0.804);
-//   position: fixed;
-//   .gallery-slider {
-//     display: flex;
-//     justify-content: center;
-//     .slider-image {
-//       position: absolute;
-//       top: 50%;
-//       left: 50%;
-//       transform: translate(-50%, -50%);
-//       background-size: cover;
-//       background-repeat: no-repeat;
-//       width: 60%;
-//       height: 40em;
-//       background-position: center;
-//       transition: 1s;
-//     }
-
-//     // Beaking Point 800px
-
-//     .left-icon {
-//       position: absolute;
-//       background-color: #fff;
-//       left: 2em;
-//       top: 50%;
-//       transform: translate(0, -50%);
-//       // right: 1.5em;
-//       cursor: pointer;
-//       color: white;
-//       border-radius: 50%;
-//       padding: 10px;
-//       right: 2em;
-//       top: 50%;
-//       width: 45px;
-//       height: 45px;
-//     }
-//     .right-icon {
-//       background-color: #fff;
-//       cursor: pointer;
-//       position: absolute;
-//       border-radius: 50%;
-//       padding: 10px;
-//       right: 2em;
-//       top: 50%;
-//       width: 45px;
-//       height: 45px;
-//       color: #fff;
-//       transform: translate(0, -50%);
-//     }
-//     .slider-close-icon {
-//       position: absolute;
-//       top: 1.5em;
-//       right: 1.5em;
-//       cursor: pointer;
-//       color: white;
-//       width: 25px;
-//       height: 25px;
-//     }
-//     .slider-dots {
-//       position: absolute;
-//       z-index: 99;
-//       bottom: 1em;
-//       .dots-icon {
-//         color: #fff;
-//         width: 1.3em;
-//         height: 1.3em;
-//         margin: 0 1.5px;
-//         cursor: pointer;
-//       }
-//       .dots-icon:hover {
-//         color: grey;
-//       }
-//     }
-//   }
-//   @media screen and (max-width: 670px) {
-//     .gallery-slider {
-//       .slider-image {
-//         width: 100%;
-//       }
-//       .left-icon {
-//         padding: 5px;
-//         left: 1em;
-//         width: 35px;
-//         height: 35px;
-//       }
-//       .right-icon {
-//         padding: 5px;
-//         right: 1em;
-//         width: 35px;
-//         height: 35px;
-//       }
-//     }
-//   }
-// }
+.mobile-slider {
+  .gallery-section {
+    cursor: pointer;
+    overflow: hidden;
+    display: flex;
+    height: 300px;
+    width: 95vw;
+    .display-image {
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+      border-radius: 20px;
+      width: 100vw;
+      height: 300px;
+      background-color: rgb(234, 234, 234);
+    }
+  }
+  @media screen and (max-width: 767.5px) {
+    .gallery-section {
+      width: 100%;
+      .display-image {
+        border-radius: 0;
+        .img {
+          border-radius: 0;
+        }
+      }
+    }
+  }
+  @media screen and (max-width: 767.5px) {
+    .gallery-section {
+      margin-bottom: 1.5em;
+    }
+  }
+}

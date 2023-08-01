@@ -150,7 +150,7 @@ const Middlebar = ({ categoryList }) => {
                 setIsMobileSearchInput(true);
                 setTimeout(() => {
                   document.getElementById("search_input").focus();
-                }, 1000);
+                }, 200);
               }}
             />
             <RiShoppingCart2Line

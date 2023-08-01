@@ -227,7 +227,7 @@ const MyOrders = ({
             <OrderCard myOrderList={myOrderList} currentMenu={currentMenu} />
           </div>
         </div>
-        <div className="btn-wrapper">
+        {/* <div className="btn-wrapper">
           <Button
             onClick={handleSave}
             type="submit"
@@ -243,7 +243,7 @@ const MyOrders = ({
           >
             Cancel
           </Button>
-        </div>
+        </div> */}
       </div>
     </>
   );
