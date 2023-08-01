@@ -22,7 +22,7 @@ const Middlebar = ({ categoryList }) => {
   const [isMobileSearchInput, setIsMobileSearchInput] = useState(false);
 
   const isLoggedIn = useSelector((state) => state.isLoggedIn.isLoggedInState);
-  
+
   // const [midBarSearchInput, setMidBarSearchInput] = useState("");
   // const handleFormSubmit = (e) => {
   //   e.preventDefault();
@@ -108,6 +108,7 @@ const Middlebar = ({ categoryList }) => {
                     setMobileSearchInputValue(e.target.value);
                   }}
                   type="search"
+                  id="search_input"
                   className="search-input"
                   placeholder="Search here . ."
                 />
@@ -116,6 +117,7 @@ const Middlebar = ({ categoryList }) => {
                   className="cross-icon"
                   onClick={() => {
                     setMobileSearchInputValue("");
+                    document.getElementById("search_input").focus();
                   }}
                 />
               </span>
@@ -146,6 +148,9 @@ const Middlebar = ({ categoryList }) => {
               className="search-icon biolife-icon"
               onClick={() => {
                 setIsMobileSearchInput(true);
+                setTimeout(() => {
+                  document.getElementById("search_input").focus();
+                }, 1000);
               }}
             />
             <RiShoppingCart2Line
