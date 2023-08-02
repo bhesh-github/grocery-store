@@ -105,6 +105,7 @@
 }
 
 .see-more-btn {
+  margin-top: 1em;
   border: none;
   text-transform: uppercase;
   color: grey;
@@ -117,5 +118,6 @@
 @media screen and (max-width: 552px) {
   .product-cards-wrapper {
     padding: 0 1em;
+    
   }
 }

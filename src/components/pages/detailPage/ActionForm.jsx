@@ -21,33 +21,24 @@ const ActionForm = ({ selectedQty, setSelectedQty, currentPrice }) => {
           </span>
         </div> */}
         <span className="title">Quantity:</span>
-        <div className="qty-input">
-          <input
-            type="text"
-            name="qty12554"
-            value={selectedQty}
-            data-max_value="20"
-            data-min_value="1"
-            data-step="1"
-          />
-          <a
-            href="#"
-            className="qty-btn btn-up"
-            onClick={() => {
-              setSelectedQty((prev) => prev + 1);
-            }}
-          >
-            <i className="fa fa-caret-up" aria-hidden="true"></i>
-          </a>
-          <a
-            href="#"
-            className="qty-btn btn-down"
+        <div className="qty-btn-wrapper">
+          <div
+            className="minus"
             onClick={() => {
               selectedQty > 1 && setSelectedQty((prev) => prev - 1);
             }}
           >
-            <i className="fa fa-caret-down" aria-hidden="true"></i>
-          </a>
+            -
+          </div>
+          <input className="input" value={selectedQty} />
+          <div
+            className="plus"
+            onClick={() => {
+              setSelectedQty((prev) => prev + 1);
+            }}
+          >
+            +
+          </div>
         </div>
       </div>
       <div className="total-price-contain">
@@ -62,7 +53,6 @@ const ActionForm = ({ selectedQty, setSelectedQty, currentPrice }) => {
           className="mini-btns"
           style={{ display: "flex", justifyContent: "center", gap: "1em" }}
         >
-          {/* <span className="wishlist-btn">+ View cart</span> */}
           <span
             className="checkout-btn"
             onClick={() => {
@@ -78,7 +68,6 @@ const ActionForm = ({ selectedQty, setSelectedQty, currentPrice }) => {
               navigate("/checkout");
             }}
           >
-            {/* <BsCart4 className="cart-icon" /> */}
             Checkout
           </span>
         </div>

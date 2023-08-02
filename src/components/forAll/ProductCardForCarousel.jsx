@@ -3,7 +3,7 @@ import Button from "@mui/material/Button";
 import { GoSearch } from "react-icons/go";
 import { useNavigate } from "react-router-dom/dist";
 
-const ProductCard = ({
+const ProductCardForCarousel = ({
   item,
   showBtn,
   showZoomIcon,
@@ -28,7 +28,7 @@ const ProductCard = ({
 
   return (
     <>
-      <div className="product-item" key={id}>
+      <div className="product-card-item" key={id}>
         <div className="product-discount">
           <div className="text">
             <span className="save">save</span>
@@ -147,4 +147,4 @@ const ProductCard = ({
   );
 };
 
-export default ProductCard;
+export default ProductCardForCarousel;

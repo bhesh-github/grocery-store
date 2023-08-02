@@ -13,7 +13,15 @@ const VerticalMenu = () => {
 
   return (
     <div className="vertical-menu vertical-category-block" id="vertical_menu">
-      <div className="block-title" onClick={toggleVerticalMenu}>
+      <div
+        className="block-title"
+        onMouseEnter={() => {
+          setIsMenuListOn(true);
+        }}
+        onMouseLeave={() => {
+          setIsMenuListOn(false);
+        }}
+      >
         <IoIosMenu className="react-menu-icon" />
         <span className="menu-title">All departments</span>
         <span className="angle">
@@ -25,7 +33,15 @@ const VerticalMenu = () => {
         </span>
       </div>
       {isMenuListOn && (
-        <div className="mainmenu">
+        <div
+          className="mainmenu"
+          onMouseEnter={() => {
+            setIsMenuListOn(true);
+          }}
+          onMouseLeave={() => {
+          setIsMenuListOn(false);
+        }}
+        >
           <ul className="main-ul">
             <li className="li_nc ">
               <NavLink className="nav-link" to="" target="_self">

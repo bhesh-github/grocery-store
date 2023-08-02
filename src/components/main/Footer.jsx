@@ -67,7 +67,6 @@ const Footer = ({ paymentsImg }) => {
                           <li>
                             <a href="#">Contacts Us</a>
                           </li>
-                        
                         </ul>
                       </div>
                     </div>

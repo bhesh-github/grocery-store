@@ -1,17 +1,24 @@
 import React, { useState } from "react";
 import DisplayImage from "./DisplayImage";
 import ProductCard from "../../forAll/ProductCard";
+import ProductCardForCarousel from "../../forAll/ProductCardForCarousel";
 import RelatedProductsCarousel from "./RelatedProductsCarousel";
 import MuiTabs from "../../forAll/MuiTabs";
 import ActionForm from "./ActionForm";
 import { useParams } from "react-router-dom";
 
-const DetailPage = ({ relatedProducts, productList }) => {
+const DetailPage = ({ productList }) => {
   const [selectedQty, setSelectedQty] = useState(1);
 
-  const relatedProductsCard = relatedProducts.map((item) => (
-    <ProductCard key={item.id} item={item} showBtn={true} />
-  ));
+  // const relatedProductsCard =  relatedProducts.map((item) => (
+  //   <ProductCardForCarousel key={item.id} item={item} showBtn={true} />
+  // ));
+  const relatedProductsCard =
+    productList &&
+    productList.fruitsandvegetables &&
+    productList.fruitsandvegetables.map((item) => (
+      <ProductCardForCarousel key={item.id} item={item} showBtn={true} />
+    ));
   const { typeSlug = "", idSlug = "" } = useParams();
 
   const selectedType = productList[typeSlug];
@@ -115,60 +122,166 @@ const DetailPage = ({ relatedProducts, productList }) => {
 
 export default DetailPage;
 DetailPage.defaultProps = {
-  relatedProducts: [
-    {
-      id: 1,
-      image_link:
-        "https://static-01.daraz.com.np/p/4fdcc17b871fc68f89d48946ac224a23.jpg",
-      categories: "Juice",
-      name: "Mixed Juice",
-      currentPrice: "85.00",
-      previousPrice: "95.00",
-    },
-    {
-      id: 2,
-      image_link:
-        "https://static-01.daraz.com.np/p/a21281f087480bfb69e720b0f850ee62.jpg",
-      categories: "Juice",
-      name: "Litchi Juice",
-      currentPrice: "85.00",
-      previousPrice: "95.00",
-    },
-    {
-      id: 3,
-      image_link: "https://thulo.com/images/detailed/135/MTR-badam_wekc-an.jpg",
-      categories: "Can Juice",
-      name: "Badam Juice",
-      currentPrice: "85.00",
-      previousPrice: "95.00",
-    },
-    {
-      id: 4,
-      image_link:
-        "https://i0.wp.com/frontdoordelivery.co.uk/wp-content/uploads/2020/05/Red-Bull-24.png?fit=1000%2C1000&ssl=1",
-      categories: "Can Juice",
-      name: "Red Bull",
-      currentPrice: "85.00",
-      previousPrice: "95.00",
-    },
-    {
-      id: 5,
-      image_link:
-        "https://nypost.com/wp-content/uploads/sites/2/2023/02/coca-cola.jpg",
-      categories: "Can Juice",
-      name: "Coke",
-      currentPrice: "85.00",
-      previousPrice: "95.00",
-    },
-    {
-      id: 6,
-      image_link: "https://m.media-amazon.com/images/I/81C9nWCPXgL.jpg",
-      categories: "Alcohol",
-      name: "Jack Daniels",
-      currentPrice: "85.00",
-      previousPrice: "95.00",
-    },
-  ],
+  // relatedProducts: [
+  //   {
+  //     id: 1,
+  //     type: "beverage",
+
+  //     image_link:
+  //       "https://static-01.daraz.com.np/p/4fdcc17b871fc68f89d48946ac224a23.jpg",
+  //     categories: "Juice",
+  //     name: "Mixed Juice",
+  //     currentPrice: "85.00",
+  //     previousPrice: "95.00",
+  //     modalCartData: {
+  //       image_link_list: [
+  //         "https://static-01.daraz.com.np/p/4fdcc17b871fc68f89d48946ac224a23.jpg",
+  //         "assets/images/details-product/detail_02.jpg",
+  //         "assets/images/details-product/detail_03.jpg",
+  //         "assets/images/details-product/detail_04.jpg",
+  //         "assets/images/details-product/detail_05.jpg",
+  //         "assets/images/details-product/detail_06.jpg",
+  //         "assets/images/details-product/detail_07.jpg",
+  //       ],
+  //       introduction:
+  //         "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris vel maximus lacus. Duis ut mauris eget justo dictum tempus sed vel tellus.",
+  //       categories: "Juice",
+  //       tags: "food theme organic food organic theme",
+  //       brand: "Real Juice",
+  //     },
+  //   },
+  //   {
+  //     id: 2,
+  //     type: "beverage",
+
+  //     image_link:
+  //       "https://static-01.daraz.com.np/p/a21281f087480bfb69e720b0f850ee62.jpg",
+  //     categories: "Juice",
+  //     name: "Litchi Juice",
+  //     currentPrice: "85.00",
+  //     previousPrice: "95.00",
+  //     modalCartData: {
+  //       image_link_list: [
+  //         "https://static-01.daraz.com.np/p/4fdcc17b871fc68f89d48946ac224a23.jpg",
+  //         "assets/images/details-product/detail_02.jpg",
+  //         "assets/images/details-product/detail_03.jpg",
+  //         "assets/images/details-product/detail_04.jpg",
+  //         "assets/images/details-product/detail_05.jpg",
+  //         "assets/images/details-product/detail_06.jpg",
+  //         "assets/images/details-product/detail_07.jpg",
+  //       ],
+  //       introduction:
+  //         "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris vel maximus lacus. Duis ut mauris eget justo dictum tempus sed vel tellus.",
+  //       categories: "Juice",
+  //       tags: "food theme organic food organic theme",
+  //       brand: "Real Juice",
+  //     },
+  //   },
+  //   {
+  //     id: 3,
+  //     type: "beverage",
+
+  //     image_link: "https://thulo.com/images/detailed/135/MTR-badam_wekc-an.jpg",
+  //     categories: "Can Juice",
+  //     name: "Badam Juice",
+  //     currentPrice: "85.00",
+  //     previousPrice: "95.00",
+  //     modalCartData: {
+  //       image_link_list: [
+  //         "https://static-01.daraz.com.np/p/4fdcc17b871fc68f89d48946ac224a23.jpg",
+  //         "assets/images/details-product/detail_02.jpg",
+  //         "assets/images/details-product/detail_03.jpg",
+  //         "assets/images/details-product/detail_04.jpg",
+  //         "assets/images/details-product/detail_05.jpg",
+  //         "assets/images/details-product/detail_06.jpg",
+  //         "assets/images/details-product/detail_07.jpg",
+  //       ],
+  //       introduction:
+  //         "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris vel maximus lacus. Duis ut mauris eget justo dictum tempus sed vel tellus.",
+  //       categories: "Juice",
+  //       tags: "food theme organic food organic theme",
+  //       brand: "Real Juice",
+  //     },
+  //   },
+  //   {
+  //     id: 4,
+  //     type: "beverage",
+
+  //     image_link:
+  //       "https://i0.wp.com/frontdoordelivery.co.uk/wp-content/uploads/2020/05/Red-Bull-24.png?fit=1000%2C1000&ssl=1",
+  //     categories: "Can Juice",
+  //     name: "Red Bull",
+  //     currentPrice: "85.00",
+  //     previousPrice: "95.00",
+  //     modalCartData: {
+  //       image_link_list: [
+  //         "https://static-01.daraz.com.np/p/a21281f087480bfb69e720b0f850ee62.jpg",
+  //         "assets/images/details-product/detail_02.jpg",
+  //         "assets/images/details-product/detail_03.jpg",
+  //         "assets/images/details-product/detail_04.jpg",
+  //         "assets/images/details-product/detail_05.jpg",
+  //         "assets/images/details-product/detail_06.jpg",
+  //         "assets/images/details-product/detail_07.jpg",
+  //       ],
+  //       introduction:
+  //         "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris vel maximus lacus. Duis ut mauris eget justo dictum tempus sed vel tellus.",
+  //       categories: "Juice",
+  //       tags: "food theme organic food organic theme",
+  //       brand: "Real Juice",
+  //     },
+  //   },
+  //   {
+  //     id: 5,
+  //     type: "beverage",
+
+  //     image_link:
+  //       "https://nypost.com/wp-content/uploads/sites/2/2023/02/coca-cola.jpg",
+  //     categories: "Can Juice",
+  //     name: "Coke",
+  //     currentPrice: "85.00",
+  //     previousPrice: "95.00",
+  //     modalCartData: {
+  //       image_link_list: [
+  //         "https://static-01.daraz.com.np/p/a21281f087480bfb69e720b0f850ee62.jpg",
+  //         "assets/images/details-product/detail_02.jpg",
+  //         "assets/images/details-product/detail_03.jpg",
+  //         "assets/images/details-product/detail_04.jpg",
+  //         "assets/images/details-product/detail_05.jpg",
+  //         "assets/images/details-product/detail_06.jpg",
+  //         "assets/images/details-product/detail_07.jpg",
+  //       ],
+  //       introduction:
+  //         "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris vel maximus lacus. Duis ut mauris eget justo dictum tempus sed vel tellus.",
+  //       categories: "Juice",
+  //       tags: "food theme organic food organic theme",
+  //       brand: "Real Juice",
+  //     },
+  //   },
+  //   {
+  //     id: 6,
+  //     image_link: "https://m.media-amazon.com/images/I/81C9nWCPXgL.jpg",
+  //     categories: "Alcohol",
+  //     name: "Jack Daniels",
+  //     currentPrice: "85.00",
+  //     previousPrice: "95.00",
+  //     modalCartData: {
+  //       image_link_list: [
+  //         "https://static-01.daraz.com.np/p/a21281f087480bfb69e720b0f850ee62.jpg",
+  //         "assets/images/details-product/detail_02.jpg",
+  //         "assets/images/details-product/detail_03.jpg",
+  //         "assets/images/details-product/detail_04.jpg",
+  //         "assets/images/details-product/detail_05.jpg",
+  //         "assets/images/details-product/detail_06.jpg",
+  //         "assets/images/details-product/detail_07.jpg",
+  //       ],
+  //       introduction:
+  //         "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris vel maximus lacus. Duis ut mauris eget justo dictum tempus sed vel tellus.",
+  //       categories: "Juice",
+  //       tags: "food theme organic food organic theme",
+  //       brand: "Real Juice",
+  //     },
+  //   },
+  // ],
   productList: {
     laundryAndHousehold: [
       {

@@ -6,6 +6,49 @@
       color: #000;
     }
   }
+  .qty-btn-wrapper {
+    margin-top: 1em;
+    overflow: hidden;
+    height: 45px;
+    width: 100%;
+    display: flex;
+    border-radius: 30px;
+    .input {
+      height: 100%;
+      width: 40%;
+      border: none;
+      text-align: center;
+      font-size: 18px;
+    }
+    .minus {
+      cursor: pointer;
+      background-color: $mainColor;
+      color: #fff;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 30%;
+      height: 100%;
+      font-size: 30px;
+      font-weight: 600;
+      padding-bottom: 5px;
+    }
+    .plus {
+      cursor: pointer;
+
+      background-color: $mainColor;
+      color: #fff;
+      // border-left: 1px solid black;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 30%;
+      height: 100%;
+      font-size: 30px;
+      font-weight: 600;
+      padding-bottom: 5px;
+    }
+  }
   .buttons {
     .mini-btns {
       margin-top: 1em;
@@ -17,7 +60,7 @@
       }
       .checkout-btn {
         cursor: pointer;
-        .cart-icon{
+        .cart-icon {
           margin-right: 5px;
         }
       }
