@@ -6,6 +6,7 @@
     color: $mainColor;
     margin-bottom: 1em;
   }
+
   //
   .product-cards-wrapper {
     margin-top: 5px;
@@ -38,6 +39,9 @@
     }
   }
   @media screen and (max-width: 552px) {
+    .heading {
+      font-size: 25px;
+    }
     .product-cards-wrapper {
       padding: 0 0.3em;
     }
