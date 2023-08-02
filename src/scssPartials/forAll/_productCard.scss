@@ -35,10 +35,10 @@
   }
   .contain-product {
     .product-thumb {
-      cursor: pointer;
       .link-to-product {
         position: relative;
         .product-thumnail {
+        
           // width: 270px !important;
           // height: 270px !important;
         }
@@ -70,6 +70,7 @@
       max-height: 210px;
       border: 1px solid rgb(210, 210, 210);
       .product-thumnail {
+        cursor: pointer;
         width: 100%;
         height: 100%;
       }
@@ -164,6 +165,7 @@
 .product-item:hover {
   .contain-product {
     .product-thumb {
+      
       .btn_call_quickview {
         background-color: transparent;
         border: none;
@@ -180,6 +182,7 @@
         transition: transform 300ms ease-in-out 100ms;
       }
       .zoom-icon:hover {
+        z-index: 99;
         color: $mainColor;
       }
     }
@@ -246,6 +249,7 @@
       //   }
       // }
       .product-thumb {
+        
         overflow: hidden;
         // min-width: 210px;
         // min-height: 210px;

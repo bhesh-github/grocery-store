@@ -36,13 +36,15 @@ const ProductCard = ({
           </div>
         </div>
         <div className="contain-product layout-02">
-          <div
-            className="product-thumb"
-            onClick={() => {
-              navigate(`/detail-page/${type}/${id}`);
-            }}
-          >
-            <img src={image_link} alt="" className="product-thumnail" />
+          <div className="product-thumb">
+            <img
+              src={image_link}
+              alt=""
+              className="product-thumnail"
+              onClick={() => {
+                navigate(`/detail-page/${type}/${id}`);
+              }}
+            />
             {/* {window.innerWidth >=
               '552' &&(
                 showZoomIcon && (
