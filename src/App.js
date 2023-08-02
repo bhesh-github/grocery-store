@@ -8,7 +8,7 @@ const Home = lazy(() => import("./components/pages/home/Home"));
 const Profile = lazy(() => import("./components/pages/profile/Profile"));
 const Products = lazy(() => import("./components/pages/products/Products"));
 const Checkout = lazy(() => import("./components/pages/checkout/Checkout"));
-const Delivery = lazy(() => import("./components/pages/deliveryForm/Delivery"));
+// const Delivery = lazy(() => import("./components/pages/deliveryForm/Delivery"));
 const Cart = lazy(() => import("./components/pages/cart/Cart"));
 const Register = lazy(() => import("./components/pages/register/Register"));
 const DetailPage = lazy(() =>
@@ -34,7 +34,7 @@ function App() {
                 path="/detail-page/:typeSlug/:idSlug"
                 element={<DetailPage />}
               />
-              <Route path="/delivery-form" element={<Delivery />} />
+              {/* <Route path="/delivery-form" element={<Delivery />} /> */}
               <Route path="/products" element={<Products />} />
               <Route path="/checkout" element={<Checkout />} />
               <Route path="/cart" element={<Cart />} />

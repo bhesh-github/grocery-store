@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom/dist";
 import { useDispatch, useSelector } from "react-redux";
-import { TbTruckDelivery } from "react-icons/tb";
+// import { TbTruckDelivery } from "react-icons/tb";
 import deliveryTruck from "../../../images/forAll/deliveryTruck1.png";
 import { RiShoppingCart2Line } from "react-icons/ri";
 import { SlArrowLeft } from "react-icons/sl";
