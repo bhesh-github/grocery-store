@@ -115,6 +115,17 @@
       .icons-wrapper {
         display: flex;
         gap: 1em;
+        .delivery-truck-icon {
+          height: 20px;
+          cursor: pointer;
+
+          margin-top: 4px;
+        }
+        @media screen and (max-width: 991.5px) {
+          .delivery-truck-icon {
+            display: none;
+          }
+        }
         .search-icon {
           cursor: pointer;
           width: 27px;

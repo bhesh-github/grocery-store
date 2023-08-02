@@ -11,71 +11,75 @@
   .place-your-order-btn:hover {
     background-color: #444444;
   }
-  .form {
-    padding-left: 1em;
-    margin-top: 2em;
-    display: flex;
-    flex-direction: column;
-    gap: 0.5em;
-    width: 100%;
-    .validation-error {
-      color: red;
-    }
-    .first-name {
+
+  .checkout-progress-wrap {
+    max-width: none;
+
+    .form {
+      margin-top: 2em;
+      display: flex;
+      flex-direction: column;
+      gap: 0.5em;
       width: 100%;
-      .first-name-input {
-        width: 100%;
+      .validation-error {
+        color: red;
       }
-    }
-    .middle-name {
-      width: 100%;
-      .middle-name-input {
+      .first-name {
         width: 100%;
+        .first-name-input {
+          width: 100%;
+        }
       }
-    }
-    .last-name {
-      width: 100%;
-      .last-name-input {
+      .middle-name {
         width: 100%;
+        .middle-name-input {
+          width: 100%;
+        }
       }
-    }
-    .email {
-      width: 100%;
-      .email-input {
+      .last-name {
         width: 100%;
+        .last-name-input {
+          width: 100%;
+        }
       }
-    }
-    .city {
-      width: 100%;
-      .city-input {
+      .email {
         width: 100%;
+        .email-input {
+          width: 100%;
+        }
       }
-    }
-    .street {
-      width: 100%;
-      .street-input {
+      .city {
         width: 100%;
+        .city-input {
+          width: 100%;
+        }
       }
-    }
-    .number {
-      width: 100%;
-      .number-input {
+      .street {
         width: 100%;
+        .street-input {
+          width: 100%;
+        }
       }
-    }
-    .second-number {
-      width: 100%;
-      .second-number-input {
+      .number {
         width: 100%;
+        .number-input {
+          width: 100%;
+        }
+      }
+      .second-number {
+        width: 100%;
+        .second-number-input {
+          width: 100%;
+        }
       }
     }
   }
+
   .order-summary {
     .cart-list-box {
       .cart-list {
         .cart-elem {
           .info {
-           
             .pr-name {
               color: #000;
               font-size: 16px;
@@ -92,8 +96,8 @@
               font-size: 14px;
               color: rgb(162, 162, 162);
               font-weight: 400;
-              .text{
-                color: #000;  
+              .text {
+                color: #000;
                 font-size: 14px;
                 font-weight: 400;
               }
@@ -101,6 +105,12 @@
           }
         }
       }
+    }
+  }
+  @media screen and (max-width: 767.5px) {
+    .xs-margin-bottom-15px {
+      margin-bottom: 15px;
+      margin-top: 2em;
     }
   }
 }

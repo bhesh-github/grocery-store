@@ -1,7 +1,8 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom/dist";
 import { useDispatch, useSelector } from "react-redux";
-// import { TbTruckDelivery } from "react-icons/tb";
+import { TbTruckDelivery } from "react-icons/tb";
+import deliveryTruck from "../../../images/forAll/deliveryTruck1.png";
 import { RiShoppingCart2Line } from "react-icons/ri";
 import { SlArrowLeft } from "react-icons/sl";
 import { CiSearch } from "react-icons/ci";
@@ -11,8 +12,11 @@ import ProgressIndicator from "../../forAll/ProgressIndicator";
 import BrandLogo from "../../../images/forAll/brandlogo.png";
 import AccountMenu from "../../forAll/accountMenu/AccountMenu";
 import { toggleMobileCategoryBar } from "../../../store/features/toggleMobileCategoryBar/toggleMobileCategoryBarSlice";
+// import { toggleMobileCategoryBar } from "../../../store/features/";
+
 import { TfiClose } from "react-icons/tfi";
 import { GiHamburgerMenu } from "react-icons/gi";
+import { deliveryAddressFormReducer } from "../../../store/features/currentProfileForm/currentProfileForm";
 // import AddShoppingCartIcon from "@mui/icons-material/AddShoppingCart";
 
 const Middlebar = ({ categoryList }) => {
@@ -21,7 +25,9 @@ const Middlebar = ({ categoryList }) => {
   const [mobileSearchInputValue, setMobileSearchInputValue] = useState("");
   const [isMobileSearchInput, setIsMobileSearchInput] = useState(false);
 
-  const isLoggedIn = useSelector((state) => state.isLoggedIn.isLoggedInState);
+  // const currentForm = useSelector(
+  //   (state) => state.currentProfileForm.currentProfileFormState
+  // );
 
   // const [midBarSearchInput, setMidBarSearchInput] = useState("");
   // const handleFormSubmit = (e) => {
@@ -138,9 +144,19 @@ const Middlebar = ({ categoryList }) => {
             }}
           />
           <div className="icons-wrapper">
+            <img
+              src={deliveryTruck}
+              className="delivery-truck-icon"
+              alt=""
+              onClick={() => {
+                dispatch(deliveryAddressFormReducer());
+                navigate("/profile");
+              }}
+            />
             {/* <TbTruckDelivery
               onClick={() => {
-                navigate("/delivery-form");
+                dispatch(deliveryAddressFormReducer());
+                navigate("/profile");
               }}
               className="delivery-icon biolife-icon"
             /> */}
