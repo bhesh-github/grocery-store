@@ -1,8 +1,10 @@
-import MultiCarousel from "../../forAll/MultiCarousel";
+// import MultiCarousel from "../../forAll/MultiCarousel";
 import GallerySlider from "../../forAll/GallerySlider";
 import FoodsFilter from "./FoodsFilter";
 import AddsComp from "./AddsComp";
 import LaundryAndHousehold from "./LaundryAndHousehold";
+
+
 const Home = ({ galleryImages, galleryMobileImages }) => {
   const addsImage =
     "https://clickmart.com.np/storage/adse/tIdqGhogTepgfB9sgOTe9Bk9v2ZpraOpfEwHf3ED.png";
@@ -20,10 +22,11 @@ const Home = ({ galleryImages, galleryMobileImages }) => {
           galleryImages={galleryImages}
           galleryMobileImages={galleryMobileImages}
         />
-        <div className="multi-carousel">
+        {/* <div className="multi-carousel">
           <MultiCarousel />
-        </div>
+        </div> */}
         <FoodsFilter />
+
         <AddsComp addsImage={addsImage} />
         <LaundryAndHousehold />
       </div>

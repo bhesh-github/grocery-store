@@ -77,7 +77,7 @@ const ProductCard = ({
           </div>
           <div className="info-wrapper">
             <div className="info">
-              <b className="categories">{categories}</b>
+              <span className="categories">{categories}</span>
               <h4 className="product-title">
                 <span
                   className="pr-name"

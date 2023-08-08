@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import DisplayImage from "./DisplayImage";
-import ProductCard from "../../forAll/ProductCard";
+// import ProductCard from "../../forAll/ProductCard";
 import ProductCardForCarousel from "../../forAll/ProductCardForCarousel";
 import RelatedProductsCarousel from "./RelatedProductsCarousel";
 import MuiTabs from "../../forAll/MuiTabs";

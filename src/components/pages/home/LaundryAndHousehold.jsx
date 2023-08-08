@@ -36,14 +36,14 @@ const LaundryAndHousehold = ({ laundryAndHousehold }) => {
         <div className="product-cards-wrapper" id="products-top">
           {filteredProducts && filteredProducts}
         </div>
-        <button
+        {/* <button
           className="see-more-btn"
           onClick={() => {
             navigate("/products");
           }}
         >
           See more
-        </button>
+        </button> */}
       </div>
       <ModalCart
         selectedCartData={selectedCartData}

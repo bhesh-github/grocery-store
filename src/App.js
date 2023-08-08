@@ -35,7 +35,7 @@ function App() {
                 element={<DetailPage />}
               />
               {/* <Route path="/delivery-form" element={<Delivery />} /> */}
-              <Route path="/products" element={<Products />} />
+              <Route path="/products/:subType/:slugCategory" element={<Products />} />
               <Route path="/checkout" element={<Checkout />} />
               <Route path="/cart" element={<Cart />} />
               <Route path="/about-us" element={<AboutUs />} />

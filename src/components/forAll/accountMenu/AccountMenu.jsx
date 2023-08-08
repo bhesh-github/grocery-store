@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import { logoutReducer } from "../../../store/features/loggingLogout/isLoggedInSlice";
 import AssignmentIndIcon from "@mui/icons-material/AssignmentInd";
 import { SiGnuprivacyguard } from "react-icons/si";
@@ -7,6 +7,7 @@ import {
   createAccountFormReducer,
   loginFormReducer,
 } from "../../../store/features/currentForm/currentFormSlice";
+import { profileSettingFormReducer } from "../../../store/features/currentProfileForm/currentProfileForm";
 import { useNavigate } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
 
@@ -125,6 +126,7 @@ export default function AccountMenu({ setLogginOut }) {
             <MenuItem
               onClick={() => {
                 handleClose();
+                dispatch(profileSettingFormReducer());
                 navigate("/profile");
               }}
               className="profile-text"
