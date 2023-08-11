@@ -54,7 +54,6 @@ const Middlebar = ({ categoryList }) => {
   isMobileSearchInput || toggleMobileCategory
     ? (document.body.style.overflowY = "hidden")
     : (document.body.style.overflowY = "scroll");
-
   return (
     <>
       {logginOut ||
@@ -127,7 +126,13 @@ const Middlebar = ({ categoryList }) => {
                   }}
                 />
               </span>
-              <span className="text" onClick={handleMobileSearch}>
+              <span
+                className="text"
+                onClick={() => {
+                  handleMobileSearch();
+                  document.getElementById("search_input").focus();
+                }}
+              >
                 Search
               </span>
             </div>
@@ -143,6 +148,7 @@ const Middlebar = ({ categoryList }) => {
               navigate("/");
             }}
           />
+          
           <div className="icons-wrapper">
             <img
               src={deliveryTruck}

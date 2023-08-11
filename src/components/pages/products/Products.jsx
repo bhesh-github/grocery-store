@@ -557,6 +557,72 @@ Products.defaultProps = {
           brand: "Real Rice",
         },
       },
+      {
+        id: 12,
+        type: "grocery",
+        image_link:
+          "https://cdn.apartmenttherapy.info/image/upload/f_auto,q_auto:eco,c_fill,g_auto,w_1500,ar_3:2/k%2FPhoto%2FLifestyle%2F2020-20-First-Thing-You-Should-Do-With-Aluminum-Foil%2FLifestyle-The-First-Thing-You-Should-Do-With-A-New-Box-of-Aluminum-Foil_086",
+        categories: "Aluminum Foil",
+        name: "Raynolds Wrap",
+        currentPrice: "85.00",
+        previousPrice: "95.00",
+        modalCartData: {
+          image_link_list: [
+            "https://cdn.apartmenttherapy.info/image/upload/f_auto,q_auto:eco,c_fill,g_auto,w_1500,ar_3:2/k%2FPhoto%2FLifestyle%2F2020-20-First-Thing-You-Should-Do-With-Aluminum-Foil%2FLifestyle-The-First-Thing-You-Should-Do-With-A-New-Box-of-Aluminum-Foil_086",
+            "https://cdn.apartmenttherapy.info/image/upload/f_auto,q_auto:eco,c_fill,g_auto,w_1500,ar_3:2/k%2FPhoto%2FLifestyle%2F2020-20-First-Thing-You-Should-Do-With-Aluminum-Foil%2FLifestyle-The-First-Thing-You-Should-Do-With-A-New-Box-of-Aluminum-Foil_086",
+            "https://cdn.apartmenttherapy.info/image/upload/f_auto,q_auto:eco,c_fill,g_auto,w_1500,ar_3:2/k%2FPhoto%2FLifestyle%2F2020-20-First-Thing-You-Should-Do-With-Aluminum-Foil%2FLifestyle-The-First-Thing-You-Should-Do-With-A-New-Box-of-Aluminum-Foil_086",
+          ],
+          introduction:
+            "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris vel maximus lacus. Duis ut mauris eget justo dictum tempus sed vel tellus.",
+          categories: "Juice",
+          tags: "food theme organic food organic theme",
+          brand: "Real Rice",
+        },
+      },
+      {
+        id: 13,
+        type: "grocery",
+        image_link:
+          "https://www.asahikasei-hp.com/wp-content/uploads/2021/12/Reduces-Calories-FPF-1024x1024.jpg",
+        categories: "Aluminum Foil",
+        name: "Frying Pan Foil",
+        currentPrice: "85.00",
+        previousPrice: "95.00",
+        modalCartData: {
+          image_link_list: [
+            "https://www.asahikasei-hp.com/wp-content/uploads/2021/12/Reduces-Calories-FPF-1024x1024.jpg",
+            "https://www.asahikasei-hp.com/wp-content/uploads/2021/12/Reduces-Calories-FPF-1024x1024.jpg",
+            "https://www.asahikasei-hp.com/wp-content/uploads/2021/12/Reduces-Calories-FPF-1024x1024.jpg",
+          ],
+          introduction:
+            "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris vel maximus lacus. Duis ut mauris eget justo dictum tempus sed vel tellus.",
+          categories: "Juice",
+          tags: "food theme organic food organic theme",
+          brand: "Real Rice",
+        },
+      },
+      {
+        id: 14,
+        type: "grocery",
+        image_link:
+          "https://media-services.digital-rb.com/s3/live-productcatalogue/sys-master/images/hb8/h8a/8806932873246/330925.jpg?width=1280&height=1280",
+        categories: "Air Fresheners",
+        name: "Air Wick",
+        currentPrice: "85.00",
+        previousPrice: "95.00",
+        modalCartData: {
+          image_link_list: [
+            "https://media-services.digital-rb.com/s3/live-productcatalogue/sys-master/images/hb8/h8a/8806932873246/330925.jpg?width=1280&height=1280",
+            "https://media-services.digital-rb.com/s3/live-productcatalogue/sys-master/images/hb8/h8a/8806932873246/330925.jpg?width=1280&height=1280",
+            "https://media-services.digital-rb.com/s3/live-productcatalogue/sys-master/images/hb8/h8a/8806932873246/330925.jpg?width=1280&height=1280",
+          ],
+          introduction:
+            "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris vel maximus lacus. Duis ut mauris eget justo dictum tempus sed vel tellus.",
+          categories: "Juice",
+          tags: "food theme organic food organic theme",
+          brand: "Real Rice",
+        },
+      },
     ],
     bakeryanddairy: [
       {

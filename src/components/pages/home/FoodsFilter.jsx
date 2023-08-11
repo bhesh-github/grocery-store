@@ -450,6 +450,34 @@ ViewItems.defaultProps = {
           "https://www.allthatgrows.in/cdn/shop/products/Cherry-Tomato_1600x.jpg?v=1598080165",
         categories: "Fruits",
       },
+      {
+        id: 24,
+        type: "grocery",
+        image_link:
+          "https://i5.walmartimages.com/asr/4fa8bc43-4b2e-4c2b-bbac-4562691e366d.0ff28b1b7139ae055501d5a57a64b1d4.jpeg",
+        categories: "Aluminum Foil",
+      },
+      {
+        id: 25,
+        type: "grocery",
+        image_link:
+          "https://cdn.tragate.com/items/soft-touch-air-fresheners-air-fresheners-138133-932952.jpg",
+        categories: "Air Fresheners",
+      },
+      {
+        id: 26,
+        type: "grocery",
+        image_link:
+          "https://static-01.daraz.com.np/p/e3008a88350e2c7d9cf9e42faba1eab3.jpg",
+        categories: "Aprons",
+      },
+      {
+        id: 26,
+        type: "grocery",
+        image_link:
+          "https://static-01.daraz.com.np/p/26bc8eaa4cd624c783672abef5b810f1.jpg",
+        categories: "Ayurvedic Products",
+      },
     ],
     bakeryanddairy: [
       {

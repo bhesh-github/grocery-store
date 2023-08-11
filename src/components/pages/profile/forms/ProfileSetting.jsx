@@ -4,6 +4,7 @@ import Button from "@mui/material/Button";
 import { useNavigate } from "react-router-dom";
 import profileIcon from "../../../../images/forAll/profileIcon.jpg";
 
+
 const inputObj = {
   profile_img: "",
   username: "",
