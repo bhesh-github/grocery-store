@@ -32,15 +32,21 @@ const Products = ({ productsList, categoryList }) => {
     });
 
   const sortedAlpha = [];
+  let otherAlpha = [];
   const filteredProductItems =
     filteredProductCategory &&
     filteredProductCategory.filter((item) => {
       const { name = "" } = item;
+      name[0] !== activeAlphabet.alpha && otherAlpha.push(item);
       if (!sortedAlpha.find((sortedA) => sortedA === name[0])) {
         sortedAlpha.push(name[0]);
       }
       return name[0] === activeAlphabet.alpha;
     });
+
+  const otherProductsData = otherAlpha.sort((a, b) =>
+    a.name > b.name ? 1 : -1
+  );
   const finalSortedAlpha = sortedAlpha && sortedAlpha.sort();
 
   useEffect(() => {
@@ -54,6 +60,20 @@ const Products = ({ productsList, categoryList }) => {
   const displayProducts =
     filteredProductItems &&
     filteredProductItems.slice(0, `${sliceNum}`).map((item) => {
+      return (
+        <ProductCard
+          item={item}
+          showBtn={true}
+          showZoomIcon={true}
+          key={item.id}
+          setModalCartDataState={setModalCartDataState}
+          setIsDisplayedClass={setIsDisplayedClass}
+        />
+      );
+    });
+  const otherDisplayProducts =
+    otherProductsData &&
+    otherProductsData.slice(0, `${sliceNum}`).map((item) => {
       return (
         <ProductCard
           item={item}
@@ -119,6 +139,7 @@ const Products = ({ productsList, categoryList }) => {
                 style={{ width: "100%" }}
               >
                 {displayProducts && displayProducts}
+                {otherDisplayProducts && otherDisplayProducts}
               </div>
               <div className="alphabets">
                 {finalSortedAlpha &&

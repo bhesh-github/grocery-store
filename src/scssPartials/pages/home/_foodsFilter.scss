@@ -75,11 +75,11 @@
   width: 100%;
   .product-cards-wrapper {
     margin-top: 5px;
+    margin-left: -1em;
     padding: 0 2em;
     display: flex;
     height: 100%;
-    display: flex;
-    justify-content: flex-start;
+    justify-content: center;
     flex-wrap: wrap;
     list-style-type: none;
     .contain-product {
@@ -94,7 +94,9 @@
   .alphabets {
     margin-left: -1em;
     right: 0;
-    top: 0;
+    top: 10em;
+    position: -webkit-sticky; /* Safari */
+    position: sticky;
     background-color: rgb(233, 233, 233);
     overflow-y: scroll;
     max-height: 631px;

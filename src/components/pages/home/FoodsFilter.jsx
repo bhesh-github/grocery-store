@@ -164,23 +164,6 @@ const ViewItems = ({ viewProductsIcon, productList }) => {
         </>
       );
     });
-  const alphabeticFilteredSubCategory =
-    currentCategory &&
-    currentCategory.filter((item) => {
-      return item.categories[0].toUpperCase() === activeAlphabet.alpha;
-    });
-
-  const SubCategoryCards =
-    alphabeticFilteredSubCategory &&
-    alphabeticFilteredSubCategory.map((item, idx) => (
-      <SubCategoryCard
-        item={item}
-        showBtn={true}
-        showZoomIcon={true}
-        key={idx}
-        setModalCartDataState={setModalCartDataState}
-      />
-    ));
 
   let alphabets = [];
   for (let i = 65; i < 65 + 26; i++) {
@@ -195,6 +178,41 @@ const ViewItems = ({ viewProductsIcon, productList }) => {
     }));
   };
 
+  let otherAlpha = [];
+  const alphabeticFilteredSubCategory =
+    currentCategory &&
+    currentCategory.filter((item) => {
+      if (item.categories[0].toUpperCase() !== activeAlphabet.alpha) {
+        otherAlpha.push(item);
+      }
+      return item.categories[0].toUpperCase() === activeAlphabet.alpha;
+    });
+
+  otherAlpha.sort((a, b) => (a.categories > b.categories ? 1 : -1));
+
+  const SubCategoryCards =
+    alphabeticFilteredSubCategory &&
+    alphabeticFilteredSubCategory.map((item, idx) => (
+      <SubCategoryCard
+        item={item}
+        showBtn={true}
+        showZoomIcon={true}
+        key={idx}
+        setModalCartDataState={setModalCartDataState}
+      />
+    ));
+  const otherCategoryCards =
+    otherAlpha &&
+    otherAlpha.map((item, idx) => (
+      <SubCategoryCard
+        item={item}
+        showBtn={true}
+        showZoomIcon={true}
+        key={idx}
+        setModalCartDataState={setModalCartDataState}
+      />
+    ));
+
   return (
     <>
       <div className="foods-filter-comp">
@@ -208,6 +226,7 @@ const ViewItems = ({ viewProductsIcon, productList }) => {
         <div className="product-cards-outer">
           <div className="product-cards-wrapper" id="products-top">
             {SubCategoryCards && SubCategoryCards}
+            {otherCategoryCards && otherCategoryCards}
           </div>
           <div className="alphabets">
             {alphabets &&
@@ -404,10 +423,10 @@ ViewItems.defaultProps = {
     ],
     grocery: [
       {
-        id: 1,
+        id: 4,
         type: "grocery",
-        image_link: "https://thulo.com/images/detailed/97/IMG_4582.jpg",
-        categories: "Rice",
+        image_link: "https://m.media-amazon.com/images/I/61791-sRVQL.jpg",
+        categories: "Peas",
       },
       {
         id: 3,
@@ -417,10 +436,10 @@ ViewItems.defaultProps = {
         categories: "Daal",
       },
       {
-        id: 4,
+        id: 1,
         type: "grocery",
-        image_link: "https://m.media-amazon.com/images/I/61791-sRVQL.jpg",
-        categories: "Peas",
+        image_link: "https://thulo.com/images/detailed/97/IMG_4582.jpg",
+        categories: "Rice",
       },
       {
         id: 5,
